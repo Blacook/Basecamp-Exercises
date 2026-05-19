@@ -1,0 +1,664 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: CC
+      - generic [ref=e7]:
+        - generic [ref=e8]: Catalyst Components
+        - generic [ref=e9]: Inventory Management System
+      - button "Collapse sidebar" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+    - navigation [ref=e13]:
+      - link "Overview" [ref=e14] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e15]: Overview
+      - link "Inventory" [ref=e16] [cursor=pointer]:
+        - /url: /inventory
+        - generic [ref=e17]: Inventory
+      - link "Orders" [ref=e18] [cursor=pointer]:
+        - /url: /orders
+        - generic [ref=e19]: Orders
+      - link "Finance" [active] [ref=e20] [cursor=pointer]:
+        - /url: /spending
+        - generic [ref=e21]: Finance
+      - link "Demand Forecast" [ref=e22] [cursor=pointer]:
+        - /url: /demand
+        - generic [ref=e23]: Demand Forecast
+      - link "Restocking" [ref=e24] [cursor=pointer]:
+        - /url: /restocking
+        - generic [ref=e25]: Restocking
+      - link "Reports" [ref=e26] [cursor=pointer]:
+        - /url: /reports
+        - generic [ref=e27]: Reports
+    - generic [ref=e28]:
+      - button "English" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e35]: English
+        - img [ref=e36]
+      - button "JD John Doe" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: JD
+        - generic [ref=e41]: John Doe
+        - img [ref=e42]
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Time Period
+          - combobox [ref=e50] [cursor=pointer]:
+            - option "All Months" [selected]
+            - option "January"
+            - option "February"
+            - option "March"
+            - option "April"
+            - option "May"
+            - option "June"
+            - option "July"
+            - option "August"
+            - option "September"
+            - option "October"
+            - option "November"
+            - option "December"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Location
+          - combobox [ref=e53] [cursor=pointer]:
+            - option "All" [selected]
+            - option "San Francisco"
+            - option "London"
+            - option "Tokyo"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Category
+          - combobox [ref=e56] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Circuit Boards"
+            - option "Sensors"
+            - option "Actuators"
+            - option "Controllers"
+            - option "Power Supplies"
+        - generic [ref=e57]:
+          - generic [ref=e58]: Order Status
+          - combobox [ref=e59] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Delivered"
+            - option "Shipped"
+            - option "Processing"
+            - option "Backordered"
+      - button "Reset all filters" [disabled] [ref=e60]:
+        - img [ref=e61]
+    - main [ref=e63]:
+      - generic [ref=e4149]:
+        - generic [ref=e4150]:
+          - heading "Finance Dashboard" [level=2] [ref=e4151]
+          - paragraph [ref=e4152]: Track revenue, costs, and financial performance
+        - generic [ref=e4153]:
+          - generic [ref=e4154]:
+            - generic [ref=e4155]:
+              - generic [ref=e4156]: Total Revenue
+              - generic [ref=e4157]: $31,166,853
+              - generic [ref=e4158]:
+                - generic [ref=e4159]: ↑
+                - text: From 250 orders
+            - generic [ref=e4160]:
+              - generic [ref=e4161]: Total Costs
+              - generic [ref=e4162]: $19,281,500
+              - generic [ref=e4163]: Procurement + Operational + Labor + Overhead
+            - generic [ref=e4164]:
+              - generic [ref=e4165]: Net Profit
+              - generic [ref=e4166]: $11,885,353
+              - generic [ref=e4167]: 38.1% margin
+            - generic [ref=e4168]:
+              - generic [ref=e4169]: Avg Order Value
+              - generic [ref=e4170]: $124,667
+              - generic [ref=e4171]: Per order revenue
+          - generic [ref=e4172]:
+            - generic [ref=e4173]:
+              - heading "Monthly Revenue vs Costs" [level=3] [ref=e4174]
+              - generic [ref=e4175]:
+                - generic [ref=e4176]: Revenue
+                - generic [ref=e4178]: Total Costs
+            - generic [ref=e4181]:
+              - generic [ref=e4182]:
+                - generic [ref=e4183]: $5234K
+                - generic [ref=e4184]: $3926K
+                - generic [ref=e4185]: $2617K
+                - generic [ref=e4186]: $1309K
+                - generic [ref=e4187]: $0
+              - generic [ref=e4188]:
+                - generic [ref=e4189]:
+                  - generic [ref=e4190]:
+                    - 'generic "Revenue: $1,993,655.74" [ref=e4191] [cursor=pointer]'
+                    - 'generic "Costs: $1,405,000" [ref=e4192] [cursor=pointer]'
+                  - generic [ref=e4193]: Jan
+                - generic [ref=e4194]:
+                  - generic [ref=e4195]:
+                    - 'generic "Revenue: $4,374,516" [ref=e4196] [cursor=pointer]'
+                    - 'generic "Costs: $1,370,000" [ref=e4197] [cursor=pointer]'
+                  - generic [ref=e4198]: Feb
+                - generic [ref=e4199]:
+                  - generic [ref=e4200]:
+                    - 'generic "Revenue: $2,285,193.26" [ref=e4201] [cursor=pointer]'
+                    - 'generic "Costs: $1,610,000" [ref=e4202] [cursor=pointer]'
+                  - generic [ref=e4203]: Mar
+                - generic [ref=e4204]:
+                  - generic [ref=e4205]:
+                    - 'generic "Revenue: $1,490,663.97" [ref=e4206] [cursor=pointer]'
+                    - 'generic "Costs: $1,438,000" [ref=e4207] [cursor=pointer]'
+                  - generic [ref=e4208]: Apr
+                - generic [ref=e4209]:
+                  - generic [ref=e4210]:
+                    - 'generic "Revenue: $1,460,581.74" [ref=e4211] [cursor=pointer]'
+                    - 'generic "Costs: $1,730,000" [ref=e4212] [cursor=pointer]'
+                  - generic [ref=e4213]: May
+                - generic [ref=e4214]:
+                  - generic [ref=e4215]:
+                    - 'generic "Revenue: $1,394,135.93" [ref=e4216] [cursor=pointer]'
+                    - 'generic "Costs: $1,580,500" [ref=e4217] [cursor=pointer]'
+                  - generic [ref=e4218]: Jun
+                - generic [ref=e4219]:
+                  - generic [ref=e4220]:
+                    - 'generic "Revenue: $3,036,142.5" [ref=e4221] [cursor=pointer]'
+                    - 'generic "Costs: $1,773,000" [ref=e4222] [cursor=pointer]'
+                  - generic [ref=e4223]: Jul
+                - generic [ref=e4224]:
+                  - generic [ref=e4225]:
+                    - 'generic "Revenue: $1,848,694.13" [ref=e4226] [cursor=pointer]'
+                    - 'generic "Costs: $1,505,000" [ref=e4227] [cursor=pointer]'
+                  - generic [ref=e4228]: Aug
+                - generic [ref=e4229]:
+                  - generic [ref=e4230]:
+                    - 'generic "Revenue: $2,667,140.78" [ref=e4231] [cursor=pointer]'
+                    - 'generic "Costs: $1,872,000" [ref=e4232] [cursor=pointer]'
+                  - generic [ref=e4233]: Sep
+                - generic [ref=e4234]:
+                  - generic [ref=e4235]:
+                    - 'generic "Revenue: $2,714,614.17" [ref=e4236] [cursor=pointer]'
+                    - 'generic "Costs: $1,635,000" [ref=e4237] [cursor=pointer]'
+                  - generic [ref=e4238]: Oct
+                - generic [ref=e4239]:
+                  - generic [ref=e4240]:
+                    - 'generic "Revenue: $2,668,438.93" [ref=e4241] [cursor=pointer]'
+                    - 'generic "Costs: $1,548,000" [ref=e4242] [cursor=pointer]'
+                  - generic [ref=e4243]: Nov
+                - generic [ref=e4244]:
+                  - generic [ref=e4245]:
+                    - 'generic "Revenue: $5,233,075.94" [ref=e4246] [cursor=pointer]'
+                    - 'generic "Costs: $1,815,000" [ref=e4247] [cursor=pointer]'
+                  - generic [ref=e4248]: Dec
+          - generic [ref=e4249]:
+            - generic [ref=e4250]:
+              - heading "Monthly Cost Flow" [level=3] [ref=e4251]
+              - generic [ref=e4252]:
+                - generic [ref=e4253]: Procurement
+                - generic [ref=e4255]: Operational
+                - generic [ref=e4257]: Labor
+                - generic [ref=e4259]: Overhead
+            - generic [ref=e4262]:
+              - generic [ref=e4263]:
+                - generic [ref=e4264]: $25K
+                - generic [ref=e4265]: $20K
+                - generic [ref=e4266]: $15K
+                - generic [ref=e4267]: $10K
+                - generic [ref=e4268]: $5K
+                - generic [ref=e4269]: $0
+              - generic [ref=e4270]:
+                - generic [ref=e4271]:
+                  - generic [ref=e4272] [cursor=pointer]:
+                    - 'generic "Procurement: $555,000" [ref=e4273]'
+                    - 'generic "Operational: $285,000" [ref=e4274]'
+                    - 'generic "Labor: $420,000" [ref=e4275]'
+                    - 'generic "Overhead: $145,000" [ref=e4276]'
+                  - generic [ref=e4277]: Jan
+                - generic [ref=e4278]:
+                  - generic [ref=e4279] [cursor=pointer]:
+                    - 'generic "Procurement: $480,000" [ref=e4280]'
+                    - 'generic "Operational: $310,000" [ref=e4281]'
+                    - 'generic "Labor: $445,000" [ref=e4282]'
+                    - 'generic "Overhead: $135,000" [ref=e4283]'
+                  - generic [ref=e4284]: Feb
+                - generic [ref=e4285]:
+                  - generic [ref=e4286] [cursor=pointer]:
+                    - 'generic "Procurement: $620,000" [ref=e4287]'
+                    - 'generic "Operational: $340,000" [ref=e4288]'
+                    - 'generic "Labor: $485,000" [ref=e4289]'
+                    - 'generic "Overhead: $165,000" [ref=e4290]'
+                  - generic [ref=e4291]: Mar
+                - generic [ref=e4292]:
+                  - generic [ref=e4293] [cursor=pointer]:
+                    - 'generic "Procurement: $540,000" [ref=e4294]'
+                    - 'generic "Operational: $295,000" [ref=e4295]'
+                    - 'generic "Labor: $455,000" [ref=e4296]'
+                    - 'generic "Overhead: $148,000" [ref=e4297]'
+                  - generic [ref=e4298]: Apr
+                - generic [ref=e4299]:
+                  - generic [ref=e4300] [cursor=pointer]:
+                    - 'generic "Procurement: $680,000" [ref=e4301]'
+                    - 'generic "Operational: $365,000" [ref=e4302]'
+                    - 'generic "Labor: $510,000" [ref=e4303]'
+                    - 'generic "Overhead: $175,000" [ref=e4304]'
+                  - generic [ref=e4305]: May
+                - generic [ref=e4306]:
+                  - generic [ref=e4307] [cursor=pointer]:
+                    - 'generic "Procurement: $595,000" [ref=e4308]'
+                    - 'generic "Operational: $342,000" [ref=e4309]'
+                    - 'generic "Labor: $483,000" [ref=e4310]'
+                    - 'generic "Overhead: $160,500" [ref=e4311]'
+                  - generic [ref=e4312]: Jun
+                - generic [ref=e4313]:
+                  - generic [ref=e4314] [cursor=pointer]:
+                    - 'generic "Procurement: $710,000" [ref=e4315]'
+                    - 'generic "Operational: $375,000" [ref=e4316]'
+                    - 'generic "Labor: $520,000" [ref=e4317]'
+                    - 'generic "Overhead: $168,000" [ref=e4318]'
+                  - generic [ref=e4319]: Jul
+                - generic [ref=e4320]:
+                  - generic [ref=e4321] [cursor=pointer]:
+                    - 'generic "Procurement: $560,000" [ref=e4322]'
+                    - 'generic "Operational: $320,000" [ref=e4323]'
+                    - 'generic "Labor: $470,000" [ref=e4324]'
+                    - 'generic "Overhead: $155,000" [ref=e4325]'
+                  - generic [ref=e4326]: Aug
+                - generic [ref=e4327]:
+                  - generic [ref=e4328] [cursor=pointer]:
+                    - 'generic "Procurement: $750,000" [ref=e4329]'
+                    - 'generic "Operational: $395,000" [ref=e4330]'
+                    - 'generic "Labor: $545,000" [ref=e4331]'
+                    - 'generic "Overhead: $182,000" [ref=e4332]'
+                  - generic [ref=e4333]: Sep
+                - generic [ref=e4334]:
+                  - generic [ref=e4335] [cursor=pointer]:
+                    - 'generic "Procurement: $625,000" [ref=e4336]'
+                    - 'generic "Operational: $350,000" [ref=e4337]'
+                    - 'generic "Labor: $495,000" [ref=e4338]'
+                    - 'generic "Overhead: $165,000" [ref=e4339]'
+                  - generic [ref=e4340]: Oct
+                - generic [ref=e4341]:
+                  - generic [ref=e4342] [cursor=pointer]:
+                    - 'generic "Procurement: $580,000" [ref=e4343]'
+                    - 'generic "Operational: $330,000" [ref=e4344]'
+                    - 'generic "Labor: $480,000" [ref=e4345]'
+                    - 'generic "Overhead: $158,000" [ref=e4346]'
+                  - generic [ref=e4347]: Nov
+                - generic [ref=e4348]:
+                  - generic [ref=e4349] [cursor=pointer]:
+                    - 'generic "Procurement: $720,000" [ref=e4350]'
+                    - 'generic "Operational: $385,000" [ref=e4351]'
+                    - 'generic "Labor: $530,000" [ref=e4352]'
+                    - 'generic "Overhead: $180,000" [ref=e4353]'
+                  - generic [ref=e4354]: Dec
+          - generic [ref=e4355]:
+            - generic [ref=e4356]:
+              - heading "Spending by Category" [level=3] [ref=e4358]
+              - generic [ref=e4359]:
+                - generic [ref=e4360]:
+                  - generic [ref=e4361]:
+                    - generic [ref=e4362]: Raw Materials
+                    - generic [ref=e4363]: $2,562,000
+                  - generic [ref=e4366]:
+                    - generic [ref=e4367]: 42.5% of total
+                    - generic [ref=e4368]: +15.2%
+                - generic [ref=e4369]:
+                  - generic [ref=e4370]:
+                    - generic [ref=e4371]: Components
+                    - generic [ref=e4372]: $2,946,000
+                  - generic [ref=e4375]:
+                    - generic [ref=e4376]: 38.8% of total
+                    - generic [ref=e4377]: +10.5%
+                - generic [ref=e4378]:
+                  - generic [ref=e4379]:
+                    - generic [ref=e4380]: Equipment
+                    - generic [ref=e4381]: $1,442,400
+                  - generic [ref=e4384]:
+                    - generic [ref=e4385]: 19% of total
+                    - generic [ref=e4386]: +8.3%
+                - generic [ref=e4387]:
+                  - generic [ref=e4388]:
+                    - generic [ref=e4389]: Consumables
+                    - generic [ref=e4390]: $1,767,000
+                  - generic [ref=e4393]:
+                    - generic [ref=e4394]: 23.3% of total
+                    - generic [ref=e4395]: +12.7%
+            - generic [ref=e4396]:
+              - heading "Recent Transactions" [level=3] [ref=e4398]
+              - table [ref=e4400]:
+                - rowgroup [ref=e4401]:
+                  - row "ID Description Vendor Date Amount" [ref=e4402]:
+                    - columnheader "ID" [ref=e4403]
+                    - columnheader "Description" [ref=e4404]
+                    - columnheader "Vendor" [ref=e4405]
+                    - columnheader "Date" [ref=e4406]
+                    - columnheader "Amount" [ref=e4407]
+                - rowgroup [ref=e4408]:
+                  - row "TXN-2025-0901 Steel Bearing Assembly Purchase Industrial Supply Co 09/01/25 $13,425" [ref=e4409] [cursor=pointer]:
+                    - cell "TXN-2025-0901" [ref=e4410]
+                    - cell "Steel Bearing Assembly Purchase" [ref=e4411]
+                    - cell "Industrial Supply Co" [ref=e4412]
+                    - cell "09/01/25" [ref=e4413]
+                    - cell "$13,425" [ref=e4414]
+                  - row "TXN-2025-0902 Manufacturing Labor - Week 35 Internal 09/01/25 $15,800" [ref=e4415] [cursor=pointer]:
+                    - cell "TXN-2025-0902" [ref=e4416]
+                    - cell "Manufacturing Labor - Week 35" [ref=e4417]
+                    - cell "Internal" [ref=e4418]
+                    - cell "09/01/25" [ref=e4419]
+                    - cell "$15,800" [ref=e4420]
+                  - row "TXN-2025-0903 Oil Filter Cartridge Bulk Order FilterMax Inc 09/02/25 $6,600" [ref=e4421] [cursor=pointer]:
+                    - cell "TXN-2025-0903" [ref=e4422]
+                    - cell "Oil Filter Cartridge Bulk Order" [ref=e4423]
+                    - cell "FilterMax Inc" [ref=e4424]
+                    - cell "09/02/25" [ref=e4425]
+                    - cell "$6,600" [ref=e4426]
+                  - row "TXN-2025-0904 Facility Utilities PowerGrid Services 09/02/25 $4,250.75" [ref=e4427] [cursor=pointer]:
+                    - cell "TXN-2025-0904" [ref=e4428]
+                    - cell "Facility Utilities" [ref=e4429]
+                    - cell "PowerGrid Services" [ref=e4430]
+                    - cell "09/02/25" [ref=e4431]
+                    - cell "$4,250.75" [ref=e4432]
+                  - row "TXN-2025-0905 High-Temperature Gasket Stock Gasket Solutions Ltd 09/03/25 $10,837.5" [ref=e4433] [cursor=pointer]:
+                    - cell "TXN-2025-0905" [ref=e4434]
+                    - cell "High-Temperature Gasket Stock" [ref=e4435]
+                    - cell "Gasket Solutions Ltd" [ref=e4436]
+                    - cell "09/03/25" [ref=e4437]
+                    - cell "$10,837.5" [ref=e4438]
+                  - row "TXN-2025-0906 Equipment Maintenance TechMaintain Pro 09/03/25 $3,850" [ref=e4439] [cursor=pointer]:
+                    - cell "TXN-2025-0906" [ref=e4440]
+                    - cell "Equipment Maintenance" [ref=e4441]
+                    - cell "TechMaintain Pro" [ref=e4442]
+                    - cell "09/03/25" [ref=e4443]
+                    - cell "$3,850" [ref=e4444]
+                  - row "TXN-2025-0907 Industrial Widget Type A Restock Widget World Inc 09/04/25 $7,497" [ref=e4445] [cursor=pointer]:
+                    - cell "TXN-2025-0907" [ref=e4446]
+                    - cell "Industrial Widget Type A Restock" [ref=e4447]
+                    - cell "Widget World Inc" [ref=e4448]
+                    - cell "09/04/25" [ref=e4449]
+                    - cell "$7,497" [ref=e4450]
+                  - row "TXN-2025-0908 Warehouse Insurance Premium SecureGuard Insurance 09/04/25 $5,200" [ref=e4451] [cursor=pointer]:
+                    - cell "TXN-2025-0908" [ref=e4452]
+                    - cell "Warehouse Insurance Premium" [ref=e4453]
+                    - cell "SecureGuard Insurance" [ref=e4454]
+                    - cell "09/04/25" [ref=e4455]
+                    - cell "$5,200" [ref=e4456]
+                  - row "TXN-2025-0909 Electric Motor 5HP Purchase MotorTech Solutions 09/05/25 $8,900" [ref=e4457] [cursor=pointer]:
+                    - cell "TXN-2025-0909" [ref=e4458]
+                    - cell "Electric Motor 5HP Purchase" [ref=e4459]
+                    - cell "MotorTech Solutions" [ref=e4460]
+                    - cell "09/05/25" [ref=e4461]
+                    - cell "$8,900" [ref=e4462]
+                  - row "TXN-2025-0910 Safety Equipment & Supplies SafeWork Inc 09/05/25 $2,150.5" [ref=e4463] [cursor=pointer]:
+                    - cell "TXN-2025-0910" [ref=e4464]
+                    - cell "Safety Equipment & Supplies" [ref=e4465]
+                    - cell "SafeWork Inc" [ref=e4466]
+                    - cell "09/05/25" [ref=e4467]
+                    - cell "$2,150.5" [ref=e4468]
+                  - row "TXN-2025-0911 Pressure Relief Valve Stock Valve Systems Corp 09/06/25 $7,800" [ref=e4469] [cursor=pointer]:
+                    - cell "TXN-2025-0911" [ref=e4470]
+                    - cell "Pressure Relief Valve Stock" [ref=e4471]
+                    - cell "Valve Systems Corp" [ref=e4472]
+                    - cell "09/06/25" [ref=e4473]
+                    - cell "$7,800" [ref=e4474]
+                  - row "TXN-2025-0912 IT Infrastructure Support TechSupport Plus 09/06/25 $3,500" [ref=e4475] [cursor=pointer]:
+                    - cell "TXN-2025-0912" [ref=e4476]
+                    - cell "IT Infrastructure Support" [ref=e4477]
+                    - cell "TechSupport Plus" [ref=e4478]
+                    - cell "09/06/25" [ref=e4479]
+                    - cell "$3,500" [ref=e4480]
+                  - row "TXN-2025-0913 Gasket Variety Pack Gasket Solutions Ltd 09/07/25 $5,100" [ref=e4481] [cursor=pointer]:
+                    - cell "TXN-2025-0913" [ref=e4482]
+                    - cell "Gasket Variety Pack" [ref=e4483]
+                    - cell "Gasket Solutions Ltd" [ref=e4484]
+                    - cell "09/07/25" [ref=e4485]
+                    - cell "$5,100" [ref=e4486]
+                  - row "TXN-2025-0914 Manufacturing Labor - Week 36 Internal 09/08/25 $16,200" [ref=e4487] [cursor=pointer]:
+                    - cell "TXN-2025-0914" [ref=e4488]
+                    - cell "Manufacturing Labor - Week 36" [ref=e4489]
+                    - cell "Internal" [ref=e4490]
+                    - cell "09/08/25" [ref=e4491]
+                    - cell "$16,200" [ref=e4492]
+                  - row "TXN-2025-0915 Forklift Maintenance Service Industrial Equipment Services 09/08/25 $1,850" [ref=e4493] [cursor=pointer]:
+                    - cell "TXN-2025-0915" [ref=e4494]
+                    - cell "Forklift Maintenance Service" [ref=e4495]
+                    - cell "Industrial Equipment Services" [ref=e4496]
+                    - cell "09/08/25" [ref=e4497]
+                    - cell "$1,850" [ref=e4498]
+                  - row "TXN-2025-0916 Steel Bearing Bulk Order Industrial Supply Co 09/09/25 $8,950" [ref=e4499] [cursor=pointer]:
+                    - cell "TXN-2025-0916" [ref=e4500]
+                    - cell "Steel Bearing Bulk Order" [ref=e4501]
+                    - cell "Industrial Supply Co" [ref=e4502]
+                    - cell "09/09/25" [ref=e4503]
+                    - cell "$8,950" [ref=e4504]
+                  - row "TXN-2025-0917 Shipping & Logistics FastShip Logistics 09/09/25 $4,780.25" [ref=e4505] [cursor=pointer]:
+                    - cell "TXN-2025-0917" [ref=e4506]
+                    - cell "Shipping & Logistics" [ref=e4507]
+                    - cell "FastShip Logistics" [ref=e4508]
+                    - cell "09/09/25" [ref=e4509]
+                    - cell "$4,780.25" [ref=e4510]
+                  - row "TXN-2025-0918 Filter Cartridges Assortment FilterMax Inc 09/10/25 $12,375" [ref=e4511] [cursor=pointer]:
+                    - cell "TXN-2025-0918" [ref=e4512]
+                    - cell "Filter Cartridges Assortment" [ref=e4513]
+                    - cell "FilterMax Inc" [ref=e4514]
+                    - cell "09/10/25" [ref=e4515]
+                    - cell "$12,375" [ref=e4516]
+                  - row "TXN-2025-0919 Building Maintenance Facility Care Services 09/10/25 $2,950" [ref=e4517] [cursor=pointer]:
+                    - cell "TXN-2025-0919" [ref=e4518]
+                    - cell "Building Maintenance" [ref=e4519]
+                    - cell "Facility Care Services" [ref=e4520]
+                    - cell "09/10/25" [ref=e4521]
+                    - cell "$2,950" [ref=e4522]
+                  - row "TXN-2025-0920 Electric Motors Various HP MotorTech Solutions 09/11/25 $11,125" [ref=e4523] [cursor=pointer]:
+                    - cell "TXN-2025-0920" [ref=e4524]
+                    - cell "Electric Motors Various HP" [ref=e4525]
+                    - cell "MotorTech Solutions" [ref=e4526]
+                    - cell "09/11/25" [ref=e4527]
+                    - cell "$11,125" [ref=e4528]
+                  - row "TXN-2025-0921 Warehouse Security Services SecureWatch Inc 09/11/25 $4,100" [ref=e4529] [cursor=pointer]:
+                    - cell "TXN-2025-0921" [ref=e4530]
+                    - cell "Warehouse Security Services" [ref=e4531]
+                    - cell "SecureWatch Inc" [ref=e4532]
+                    - cell "09/11/25" [ref=e4533]
+                    - cell "$4,100" [ref=e4534]
+                  - row "TXN-2025-0922 Valve Assembly Purchase Valve Systems Corp 09/12/25 $9,360" [ref=e4535] [cursor=pointer]:
+                    - cell "TXN-2025-0922" [ref=e4536]
+                    - cell "Valve Assembly Purchase" [ref=e4537]
+                    - cell "Valve Systems Corp" [ref=e4538]
+                    - cell "09/12/25" [ref=e4539]
+                    - cell "$9,360" [ref=e4540]
+                  - row "TXN-2025-0923 Packaging Materials PackPro Supplies 09/12/25 $3,250" [ref=e4541] [cursor=pointer]:
+                    - cell "TXN-2025-0923" [ref=e4542]
+                    - cell "Packaging Materials" [ref=e4543]
+                    - cell "PackPro Supplies" [ref=e4544]
+                    - cell "09/12/25" [ref=e4545]
+                    - cell "$3,250" [ref=e4546]
+                  - row "TXN-2025-0924 Widget Type A & B Stock Widget World Inc 09/13/25 $6,247.5" [ref=e4547] [cursor=pointer]:
+                    - cell "TXN-2025-0924" [ref=e4548]
+                    - cell "Widget Type A & B Stock" [ref=e4549]
+                    - cell "Widget World Inc" [ref=e4550]
+                    - cell "09/13/25" [ref=e4551]
+                    - cell "$6,247.5" [ref=e4552]
+                  - row "TXN-2025-0925 Quality Control Services QC Experts LLC 09/13/25 $5,500" [ref=e4553] [cursor=pointer]:
+                    - cell "TXN-2025-0925" [ref=e4554]
+                    - cell "Quality Control Services" [ref=e4555]
+                    - cell "QC Experts LLC" [ref=e4556]
+                    - cell "09/13/25" [ref=e4557]
+                    - cell "$5,500" [ref=e4558]
+                  - row "TXN-2025-0926 Gasket Specialty Order Gasket Solutions Ltd 09/14/25 $8,925" [ref=e4559] [cursor=pointer]:
+                    - cell "TXN-2025-0926" [ref=e4560]
+                    - cell "Gasket Specialty Order" [ref=e4561]
+                    - cell "Gasket Solutions Ltd" [ref=e4562]
+                    - cell "09/14/25" [ref=e4563]
+                    - cell "$8,925" [ref=e4564]
+                  - row "TXN-2025-0927 Manufacturing Labor - Week 37 Internal 09/15/25 $15,900" [ref=e4565] [cursor=pointer]:
+                    - cell "TXN-2025-0927" [ref=e4566]
+                    - cell "Manufacturing Labor - Week 37" [ref=e4567]
+                    - cell "Internal" [ref=e4568]
+                    - cell "09/15/25" [ref=e4569]
+                    - cell "$15,900" [ref=e4570]
+                  - row "TXN-2025-0928 HVAC System Maintenance Climate Control Pro 09/15/25 $3,200" [ref=e4571] [cursor=pointer]:
+                    - cell "TXN-2025-0928" [ref=e4572]
+                    - cell "HVAC System Maintenance" [ref=e4573]
+                    - cell "Climate Control Pro" [ref=e4574]
+                    - cell "09/15/25" [ref=e4575]
+                    - cell "$3,200" [ref=e4576]
+                  - row "TXN-2025-0929 Bearing Assembly Large Order Industrial Supply Co 09/16/25 $10,740" [ref=e4577] [cursor=pointer]:
+                    - cell "TXN-2025-0929" [ref=e4578]
+                    - cell "Bearing Assembly Large Order" [ref=e4579]
+                    - cell "Industrial Supply Co" [ref=e4580]
+                    - cell "09/16/25" [ref=e4581]
+                    - cell "$10,740" [ref=e4582]
+                  - row "TXN-2025-0930 Property Tax Payment County Tax Authority 09/16/25 $8,500" [ref=e4583] [cursor=pointer]:
+                    - cell "TXN-2025-0930" [ref=e4584]
+                    - cell "Property Tax Payment" [ref=e4585]
+                    - cell "County Tax Authority" [ref=e4586]
+                    - cell "09/16/25" [ref=e4587]
+                    - cell "$8,500" [ref=e4588]
+                  - row "TXN-2025-0931 Filter Cartridge Restock FilterMax Inc 09/17/25 $7,425" [ref=e4589] [cursor=pointer]:
+                    - cell "TXN-2025-0931" [ref=e4590]
+                    - cell "Filter Cartridge Restock" [ref=e4591]
+                    - cell "FilterMax Inc" [ref=e4592]
+                    - cell "09/17/25" [ref=e4593]
+                    - cell "$7,425" [ref=e4594]
+                  - row "TXN-2025-0932 Waste Management Services EcoWaste Solutions 09/17/25 $1,850" [ref=e4595] [cursor=pointer]:
+                    - cell "TXN-2025-0932" [ref=e4596]
+                    - cell "Waste Management Services" [ref=e4597]
+                    - cell "EcoWaste Solutions" [ref=e4598]
+                    - cell "09/17/25" [ref=e4599]
+                    - cell "$1,850" [ref=e4600]
+                  - row "TXN-2025-0933 Electric Motor Special Order MotorTech Solutions 09/18/25 $13,350" [ref=e4601] [cursor=pointer]:
+                    - cell "TXN-2025-0933" [ref=e4602]
+                    - cell "Electric Motor Special Order" [ref=e4603]
+                    - cell "MotorTech Solutions" [ref=e4604]
+                    - cell "09/18/25" [ref=e4605]
+                    - cell "$13,350" [ref=e4606]
+                  - row "TXN-2025-0934 Training & Development SkillUp Training Corp 09/18/25 $4,200" [ref=e4607] [cursor=pointer]:
+                    - cell "TXN-2025-0934" [ref=e4608]
+                    - cell "Training & Development" [ref=e4609]
+                    - cell "SkillUp Training Corp" [ref=e4610]
+                    - cell "09/18/25" [ref=e4611]
+                    - cell "$4,200" [ref=e4612]
+                  - row "TXN-2025-0935 Valve Components Bulk Valve Systems Corp 09/19/25 $14,040" [ref=e4613] [cursor=pointer]:
+                    - cell "TXN-2025-0935" [ref=e4614]
+                    - cell "Valve Components Bulk" [ref=e4615]
+                    - cell "Valve Systems Corp" [ref=e4616]
+                    - cell "09/19/25" [ref=e4617]
+                    - cell "$14,040" [ref=e4618]
+                  - row "TXN-2025-0936 Telecommunications Services TechComm Services 09/19/25 $2,100" [ref=e4619] [cursor=pointer]:
+                    - cell "TXN-2025-0936" [ref=e4620]
+                    - cell "Telecommunications Services" [ref=e4621]
+                    - cell "TechComm Services" [ref=e4622]
+                    - cell "09/19/25" [ref=e4623]
+                    - cell "$2,100" [ref=e4624]
+                  - row "TXN-2025-0937 Industrial Widget Premium Line Widget World Inc 09/20/25 $5,497.8" [ref=e4625] [cursor=pointer]:
+                    - cell "TXN-2025-0937" [ref=e4626]
+                    - cell "Industrial Widget Premium Line" [ref=e4627]
+                    - cell "Widget World Inc" [ref=e4628]
+                    - cell "09/20/25" [ref=e4629]
+                    - cell "$5,497.8" [ref=e4630]
+                  - row "TXN-2025-0938 Equipment Calibration Service Precision Calibration Inc 09/20/25 $3,750" [ref=e4631] [cursor=pointer]:
+                    - cell "TXN-2025-0938" [ref=e4632]
+                    - cell "Equipment Calibration Service" [ref=e4633]
+                    - cell "Precision Calibration Inc" [ref=e4634]
+                    - cell "09/20/25" [ref=e4635]
+                    - cell "$3,750" [ref=e4636]
+                  - row "TXN-2025-0939 Gasket High-Temp Series Gasket Solutions Ltd 09/21/25 $7,012.5" [ref=e4637] [cursor=pointer]:
+                    - cell "TXN-2025-0939" [ref=e4638]
+                    - cell "Gasket High-Temp Series" [ref=e4639]
+                    - cell "Gasket Solutions Ltd" [ref=e4640]
+                    - cell "09/21/25" [ref=e4641]
+                    - cell "$7,012.5" [ref=e4642]
+                  - row "TXN-2025-0940 Manufacturing Labor - Week 38 Internal 09/22/25 $16,500" [ref=e4643] [cursor=pointer]:
+                    - cell "TXN-2025-0940" [ref=e4644]
+                    - cell "Manufacturing Labor - Week 38" [ref=e4645]
+                    - cell "Internal" [ref=e4646]
+                    - cell "09/22/25" [ref=e4647]
+                    - cell "$16,500" [ref=e4648]
+                  - row "TXN-2025-0941 Fire Safety Inspection SafeWork Inc 09/22/25 $1,250" [ref=e4649] [cursor=pointer]:
+                    - cell "TXN-2025-0941" [ref=e4650]
+                    - cell "Fire Safety Inspection" [ref=e4651]
+                    - cell "SafeWork Inc" [ref=e4652]
+                    - cell "09/22/25" [ref=e4653]
+                    - cell "$1,250" [ref=e4654]
+                  - row "TXN-2025-0942 Bearing Assembly Premium Industrial Supply Co 09/23/25 $12,530" [ref=e4655] [cursor=pointer]:
+                    - cell "TXN-2025-0942" [ref=e4656]
+                    - cell "Bearing Assembly Premium" [ref=e4657]
+                    - cell "Industrial Supply Co" [ref=e4658]
+                    - cell "09/23/25" [ref=e4659]
+                    - cell "$12,530" [ref=e4660]
+                  - row "TXN-2025-0943 Accounting & Payroll Services FinancePro Services 09/23/25 $6,200" [ref=e4661] [cursor=pointer]:
+                    - cell "TXN-2025-0943" [ref=e4662]
+                    - cell "Accounting & Payroll Services" [ref=e4663]
+                    - cell "FinancePro Services" [ref=e4664]
+                    - cell "09/23/25" [ref=e4665]
+                    - cell "$6,200" [ref=e4666]
+                  - row "TXN-2025-0944 Oil Filter Mega Pack FilterMax Inc 09/24/25 $9,900" [ref=e4667] [cursor=pointer]:
+                    - cell "TXN-2025-0944" [ref=e4668]
+                    - cell "Oil Filter Mega Pack" [ref=e4669]
+                    - cell "FilterMax Inc" [ref=e4670]
+                    - cell "09/24/25" [ref=e4671]
+                    - cell "$9,900" [ref=e4672]
+                  - row "TXN-2025-0945 Loading Dock Repairs Facility Care Services 09/24/25 $4,500" [ref=e4673] [cursor=pointer]:
+                    - cell "TXN-2025-0945" [ref=e4674]
+                    - cell "Loading Dock Repairs" [ref=e4675]
+                    - cell "Facility Care Services" [ref=e4676]
+                    - cell "09/24/25" [ref=e4677]
+                    - cell "$4,500" [ref=e4678]
+                  - row "TXN-2025-0946 Electric Motor Emergency Stock MotorTech Solutions 09/25/25 $15,575" [ref=e4679] [cursor=pointer]:
+                    - cell "TXN-2025-0946" [ref=e4680]
+                    - cell "Electric Motor Emergency Stock" [ref=e4681]
+                    - cell "MotorTech Solutions" [ref=e4682]
+                    - cell "09/25/25" [ref=e4683]
+                    - cell "$15,575" [ref=e4684]
+                  - row "TXN-2025-0947 Legal & Compliance Services LegalEase LLC 09/25/25 $5,800" [ref=e4685] [cursor=pointer]:
+                    - cell "TXN-2025-0947" [ref=e4686]
+                    - cell "Legal & Compliance Services" [ref=e4687]
+                    - cell "LegalEase LLC" [ref=e4688]
+                    - cell "09/25/25" [ref=e4689]
+                    - cell "$5,800" [ref=e4690]
+                  - row "TXN-2025-0948 Valve System Complete Kit Valve Systems Corp 09/26/25 $15,600" [ref=e4691] [cursor=pointer]:
+                    - cell "TXN-2025-0948" [ref=e4692]
+                    - cell "Valve System Complete Kit" [ref=e4693]
+                    - cell "Valve Systems Corp" [ref=e4694]
+                    - cell "09/26/25" [ref=e4695]
+                    - cell "$15,600" [ref=e4696]
+                  - row "TXN-2025-0949 Facility Utilities PowerGrid Services 09/26/25 $4,850.5" [ref=e4697] [cursor=pointer]:
+                    - cell "TXN-2025-0949" [ref=e4698]
+                    - cell "Facility Utilities" [ref=e4699]
+                    - cell "PowerGrid Services" [ref=e4700]
+                    - cell "09/26/25" [ref=e4701]
+                    - cell "$4,850.5" [ref=e4702]
+                  - row "TXN-2025-0950 Widget Assortment Large Widget World Inc 09/27/25 $6,872.25" [ref=e4703] [cursor=pointer]:
+                    - cell "TXN-2025-0950" [ref=e4704]
+                    - cell "Widget Assortment Large" [ref=e4705]
+                    - cell "Widget World Inc" [ref=e4706]
+                    - cell "09/27/25" [ref=e4707]
+                    - cell "$6,872.25" [ref=e4708]
+                  - row "TXN-2025-0951 Pest Control Services SafeGuard Pest Control 09/27/25 $850" [ref=e4709] [cursor=pointer]:
+                    - cell "TXN-2025-0951" [ref=e4710]
+                    - cell "Pest Control Services" [ref=e4711]
+                    - cell "SafeGuard Pest Control" [ref=e4712]
+                    - cell "09/27/25" [ref=e4713]
+                    - cell "$850" [ref=e4714]
+                  - row "TXN-2025-0952 Spring & Hardware Assortment Industrial Supply Co 09/28/25 $4,200" [ref=e4715] [cursor=pointer]:
+                    - cell "TXN-2025-0952" [ref=e4716]
+                    - cell "Spring & Hardware Assortment" [ref=e4717]
+                    - cell "Industrial Supply Co" [ref=e4718]
+                    - cell "09/28/25" [ref=e4719]
+                    - cell "$4,200" [ref=e4720]
+                  - row "TXN-2025-0953 Manufacturing Labor - Week 39 Internal 09/29/25 $17,100" [ref=e4721] [cursor=pointer]:
+                    - cell "TXN-2025-0953" [ref=e4722]
+                    - cell "Manufacturing Labor - Week 39" [ref=e4723]
+                    - cell "Internal" [ref=e4724]
+                    - cell "09/29/25" [ref=e4725]
+                    - cell "$17,100" [ref=e4726]
+                  - row "TXN-2025-0954 Inventory Management Software TechSolutions Inc 09/29/25 $7,500" [ref=e4727] [cursor=pointer]:
+                    - cell "TXN-2025-0954" [ref=e4728]
+                    - cell "Inventory Management Software" [ref=e4729]
+                    - cell "TechSolutions Inc" [ref=e4730]
+                    - cell "09/29/25" [ref=e4731]
+                    - cell "$7,500" [ref=e4732]
+                  - row "TXN-2025-0955 Consumables Variety Pack FilterMax Inc 09/30/25 $8,950" [ref=e4733] [cursor=pointer]:
+                    - cell "TXN-2025-0955" [ref=e4734]
+                    - cell "Consumables Variety Pack" [ref=e4735]
+                    - cell "FilterMax Inc" [ref=e4736]
+                    - cell "09/30/25" [ref=e4737]
+                    - cell "$8,950" [ref=e4738]
+                  - row "TXN-2025-0956 End of Month Inventory Audit AuditPro Services 09/30/25 $3,200" [ref=e4739] [cursor=pointer]:
+                    - cell "TXN-2025-0956" [ref=e4740]
+                    - cell "End of Month Inventory Audit" [ref=e4741]
+                    - cell "AuditPro Services" [ref=e4742]
+                    - cell "09/30/25" [ref=e4743]
+                    - cell "$3,200" [ref=e4744]

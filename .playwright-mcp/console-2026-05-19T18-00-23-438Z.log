@@ -1,0 +1,105 @@
+[    1037ms] [WARNING] [Vue warn]: Failed to resolve component: PurchaseOrderModal
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <Dashboard onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< undefined > > 
+  at <RouterView> 
+  at <App> @ http://localhost:3000/node_modules/.vite/deps/chunk-3B4AHPPG.js?v=b56264ad:2148
+[    1048ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8001/api/tasks:0
+[    1050ms] [ERROR] Failed to load tasks: AxiosError @ http://localhost:3000/src/App.vue?t=1779213153625:52
+[    1076ms] [WARNING] [Vue warn]: Failed to resolve component: PurchaseOrderModal
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at <Dashboard onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:3000/node_modules/.vite/deps/chunk-3B4AHPPG.js?v=b56264ad:2148
+[    1309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[   36972ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8001/api/restocking-orders:0
+[   36972ms] [ERROR] Failed to load restocking orders: AxiosError @ http://localhost:3000/src/views/Orders.vue?t=1779212238513:80
+[  106393ms] [LOG] Reports component mounted @ http://localhost:3000/src/views/Reports.vue:18
+[  106393ms] [LOG] Loading reports data... @ http://localhost:3000/src/views/Reports.vue:23
+[  106393ms] [LOG] Fetching quarterly data... @ http://localhost:3000/src/views/Reports.vue:28
+[  106403ms] [LOG] Quarterly data: Proxy(Array) @ http://localhost:3000/src/views/Reports.vue:31
+[  106404ms] [LOG] Fetching monthly data... @ http://localhost:3000/src/views/Reports.vue:34
+[  106406ms] [LOG] Monthly data: Proxy(Array) @ http://localhost:3000/src/views/Reports.vue:37
+[  106406ms] [LOG] Calculating summary stats... @ http://localhost:3000/src/views/Reports.vue:40
+[  106406ms] [LOG] Summary stats calculated @ http://localhost:3000/src/views/Reports.vue:42
+[  106406ms] [LOG] Loading complete @ http://localhost:3000/src/views/Reports.vue:49
+[  106407ms] [LOG] Formatting number: 8653365 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 139570.4 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 4345381.64 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 67896.59 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 7551977.410000001 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 121806.09 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 10616129.040000001 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting number: 171227.89 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Calculating bar height for revenue: 1993655.7400000002 @ http://localhost:3000/src/views/Reports.vue:129
+[  106407ms] [LOG] Formatting number: 1993655.7400000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting month: 2025-01 @ http://localhost:3000/src/views/Reports.vue:116
+[  106407ms] [LOG] Calculating bar height for revenue: 4374516 @ http://localhost:3000/src/views/Reports.vue:129
+[  106407ms] [LOG] Formatting number: 4374516 @ http://localhost:3000/src/views/Reports.vue:88
+[  106407ms] [LOG] Formatting month: 2025-02 @ http://localhost:3000/src/views/Reports.vue:116
+[  106407ms] [LOG] Calculating bar height for revenue: 2285193.26 @ http://localhost:3000/src/views/Reports.vue:129
+[  106407ms] [LOG] Formatting number: 2285193.26 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-03 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 1490663.97 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 1490663.97 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-04 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 1460581.7400000002 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 1460581.7400000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-05 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 1394135.9300000002 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 1394135.9300000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-06 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 3036142.5 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 3036142.5 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-07 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 1848694.1300000001 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 1848694.1300000001 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-08 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 2667140.7800000003 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 2667140.7800000003 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-09 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 2714614.17 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 2714614.17 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-10 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 2668438.9299999997 @ http://localhost:3000/src/views/Reports.vue:129
+[  106408ms] [LOG] Formatting number: 2668438.9299999997 @ http://localhost:3000/src/views/Reports.vue:88
+[  106408ms] [LOG] Formatting month: 2025-11 @ http://localhost:3000/src/views/Reports.vue:116
+[  106408ms] [LOG] Calculating bar height for revenue: 5233075.9399999995 @ http://localhost:3000/src/views/Reports.vue:129
+[  106409ms] [LOG] Formatting number: 5233075.9399999995 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-12 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting month: 2025-01 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 1993655.7400000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-02 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 4374516 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 2380860.26 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-03 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 2285193.26 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 2089322.7400000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-04 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 1490663.97 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 794529.2899999998 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-05 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 1460581.7400000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 30082.22999999975 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-06 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 1394135.9300000002 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 66445.81000000006 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-07 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 3036142.5 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 1642006.5699999998 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-08 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 1848694.1300000001 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting number: 1187448.3699999999 @ http://localhost:3000/src/views/Reports.vue:88
+[  106409ms] [LOG] Formatting month: 2025-09 @ http://localhost:3000/src/views/Reports.vue:116
+[  106409ms] [LOG] Formatting number: 2667140.7800000003 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 818446.6500000001 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting month: 2025-10 @ http://localhost:3000/src/views/Reports.vue:116
+[  106410ms] [LOG] Formatting number: 2714614.17 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 47473.389999999665 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting month: 2025-11 @ http://localhost:3000/src/views/Reports.vue:116
+[  106410ms] [LOG] Formatting number: 2668438.9299999997 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 46175.24000000022 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting month: 2025-12 @ http://localhost:3000/src/views/Reports.vue:116
+[  106410ms] [LOG] Formatting number: 5233075.9399999995 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 2564637.01 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 31166853.089999996 @ http://localhost:3000/src/views/Reports.vue:88
+[  106410ms] [LOG] Formatting number: 2597237.7575 @ http://localhost:3000/src/views/Reports.vue:88

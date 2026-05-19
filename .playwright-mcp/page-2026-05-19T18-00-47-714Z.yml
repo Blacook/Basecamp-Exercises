@@ -1,0 +1,557 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: CC
+      - generic [ref=e7]:
+        - generic [ref=e8]: Catalyst Components
+        - generic [ref=e9]: Inventory Management System
+      - button "Collapse sidebar" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+    - navigation [ref=e13]:
+      - link "Overview" [ref=e14] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e15]: Overview
+      - link "Inventory" [active] [ref=e16] [cursor=pointer]:
+        - /url: /inventory
+        - generic [ref=e17]: Inventory
+      - link "Orders" [ref=e18] [cursor=pointer]:
+        - /url: /orders
+        - generic [ref=e19]: Orders
+      - link "Finance" [ref=e20] [cursor=pointer]:
+        - /url: /spending
+        - generic [ref=e21]: Finance
+      - link "Demand Forecast" [ref=e22] [cursor=pointer]:
+        - /url: /demand
+        - generic [ref=e23]: Demand Forecast
+      - link "Restocking" [ref=e24] [cursor=pointer]:
+        - /url: /restocking
+        - generic [ref=e25]: Restocking
+      - link "Reports" [ref=e26] [cursor=pointer]:
+        - /url: /reports
+        - generic [ref=e27]: Reports
+    - generic [ref=e28]:
+      - button "English" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e35]: English
+        - img [ref=e36]
+      - button "JD John Doe" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: JD
+        - generic [ref=e41]: John Doe
+        - img [ref=e42]
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Time Period
+          - combobox [ref=e50] [cursor=pointer]:
+            - option "All Months" [selected]
+            - option "January"
+            - option "February"
+            - option "March"
+            - option "April"
+            - option "May"
+            - option "June"
+            - option "July"
+            - option "August"
+            - option "September"
+            - option "October"
+            - option "November"
+            - option "December"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Location
+          - combobox [ref=e53] [cursor=pointer]:
+            - option "All" [selected]
+            - option "San Francisco"
+            - option "London"
+            - option "Tokyo"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Category
+          - combobox [ref=e56] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Circuit Boards"
+            - option "Sensors"
+            - option "Actuators"
+            - option "Controllers"
+            - option "Power Supplies"
+        - generic [ref=e57]:
+          - generic [ref=e58]: Order Status
+          - combobox [ref=e59] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Delivered"
+            - option "Shipped"
+            - option "Processing"
+            - option "Backordered"
+      - button "Reset all filters" [disabled] [ref=e60]:
+        - img [ref=e61]
+    - main [ref=e63]:
+      - generic [ref=e394]:
+        - generic [ref=e395]:
+          - heading "Inventory" [level=2] [ref=e396]
+          - paragraph [ref=e397]: Track and manage all inventory items
+        - generic [ref=e399]:
+          - generic [ref=e400]:
+            - heading "Stock Levels (32 SKUs)" [level=3] [ref=e401]
+            - generic [ref=e402]:
+              - img
+              - textbox "Search by item name..." [ref=e403]
+          - table [ref=e405]:
+            - rowgroup [ref=e406]:
+              - row "SKU Item Name Category Quantity on Hand Reorder Point Unit Cost Total Value Location Status" [ref=e407]:
+                - columnheader "SKU" [ref=e408]
+                - columnheader "Item Name" [ref=e409]
+                - columnheader "Category" [ref=e410]
+                - columnheader "Quantity on Hand" [ref=e411]
+                - columnheader "Reorder Point" [ref=e412]
+                - columnheader "Unit Cost" [ref=e413]
+                - columnheader "Total Value" [ref=e414]
+                - columnheader "Location" [ref=e415]
+                - columnheader "Status" [ref=e416]
+            - rowgroup [ref=e417]:
+              - row "TMP-201 Temperature Sensor Module Sensors 125 150 $89.50 $11,187.50 Warehouse B-05 Low Stock" [ref=e418] [cursor=pointer]:
+                - cell "TMP-201" [ref=e419]:
+                  - strong [ref=e420]: TMP-201
+                - cell "Temperature Sensor Module" [ref=e421]
+                - cell "Sensors" [ref=e422]
+                - cell "125" [ref=e423]:
+                  - strong [ref=e424]: "125"
+                - cell "150" [ref=e425]
+                - cell "$89.50" [ref=e426]
+                - cell "$11,187.50" [ref=e427]:
+                  - strong [ref=e428]: $11,187.50
+                - cell "Warehouse B-05" [ref=e429]
+                - cell "Low Stock" [ref=e430]:
+                  - generic [ref=e431]: Low Stock
+              - row "SRV-301 Micro Servo Motor Actuators 45 50 $445.00 $20,025.00 Warehouse C-02 Low Stock" [ref=e432] [cursor=pointer]:
+                - cell "SRV-301" [ref=e433]:
+                  - strong [ref=e434]: SRV-301
+                - cell "Micro Servo Motor" [ref=e435]
+                - cell "Actuators" [ref=e436]
+                - cell "45" [ref=e437]:
+                  - strong [ref=e438]: "45"
+                - cell "50" [ref=e439]
+                - cell "$445.00" [ref=e440]
+                - cell "$20,025.00" [ref=e441]:
+                  - strong [ref=e442]: $20,025.00
+                - cell "Warehouse C-02" [ref=e443]
+                - cell "Low Stock" [ref=e444]:
+                  - generic [ref=e445]: Low Stock
+              - row "SRV-302 Standard Servo Motor Actuators 28 30 $725.00 $20,300.00 Warehouse C-03 Low Stock" [ref=e446] [cursor=pointer]:
+                - cell "SRV-302" [ref=e447]:
+                  - strong [ref=e448]: SRV-302
+                - cell "Standard Servo Motor" [ref=e449]
+                - cell "Actuators" [ref=e450]
+                - cell "28" [ref=e451]:
+                  - strong [ref=e452]: "28"
+                - cell "30" [ref=e453]
+                - cell "$725.00" [ref=e454]
+                - cell "$20,300.00" [ref=e455]:
+                  - strong [ref=e456]: $20,300.00
+                - cell "Warehouse C-03" [ref=e457]
+                - cell "Low Stock" [ref=e458]:
+                  - generic [ref=e459]: Low Stock
+              - row "PSU-508 Battery Backup Power Supply Power Supplies 75 100 $185.50 $13,912.50 Warehouse C-11 Low Stock" [ref=e460] [cursor=pointer]:
+                - cell "PSU-508" [ref=e461]:
+                  - strong [ref=e462]: PSU-508
+                - cell "Battery Backup Power Supply" [ref=e463]
+                - cell "Power Supplies" [ref=e464]
+                - cell "75" [ref=e465]:
+                  - strong [ref=e466]: "75"
+                - cell "100" [ref=e467]
+                - cell "$185.50" [ref=e468]
+                - cell "$13,912.50" [ref=e469]:
+                  - strong [ref=e470]: $13,912.50
+                - cell "Warehouse C-11" [ref=e471]
+                - cell "Low Stock" [ref=e472]:
+                  - generic [ref=e473]: Low Stock
+              - row "HMD-202 Humidity Sensor Module Sensors 95 80 $125.00 $11,875.00 Warehouse B-06 Adequate" [ref=e474] [cursor=pointer]:
+                - cell "HMD-202" [ref=e475]:
+                  - strong [ref=e476]: HMD-202
+                - cell "Humidity Sensor Module" [ref=e477]
+                - cell "Sensors" [ref=e478]
+                - cell "95" [ref=e479]:
+                  - strong [ref=e480]: "95"
+                - cell "80" [ref=e481]
+                - cell "$125.00" [ref=e482]
+                - cell "$11,875.00" [ref=e483]:
+                  - strong [ref=e484]: $11,875.00
+                - cell "Warehouse B-06" [ref=e485]
+                - cell "Adequate" [ref=e486]:
+                  - generic [ref=e487]: Adequate
+              - row "STP-304 Stepper Motor NEMA 23 Actuators 55 40 $285.00 $15,675.00 Warehouse C-06 Adequate" [ref=e488] [cursor=pointer]:
+                - cell "STP-304" [ref=e489]:
+                  - strong [ref=e490]: STP-304
+                - cell "Stepper Motor NEMA 23" [ref=e491]
+                - cell "Actuators" [ref=e492]
+                - cell "55" [ref=e493]:
+                  - strong [ref=e494]: "55"
+                - cell "40" [ref=e495]
+                - cell "$285.00" [ref=e496]
+                - cell "$15,675.00" [ref=e497]:
+                  - strong [ref=e498]: $15,675.00
+                - cell "Warehouse C-06" [ref=e499]
+                - cell "Adequate" [ref=e500]:
+                  - generic [ref=e501]: Adequate
+              - row "PSU-505 48V DC Power Supply Unit Power Supplies 145 120 $67.50 $9,787.50 Warehouse B-17 Adequate" [ref=e502] [cursor=pointer]:
+                - cell "PSU-505" [ref=e503]:
+                  - strong [ref=e504]: PSU-505
+                - cell "48V DC Power Supply Unit" [ref=e505]
+                - cell "Power Supplies" [ref=e506]
+                - cell "145" [ref=e507]:
+                  - strong [ref=e508]: "145"
+                - cell "120" [ref=e509]
+                - cell "$67.50" [ref=e510]
+                - cell "$9,787.50" [ref=e511]:
+                  - strong [ref=e512]: $9,787.50
+                - cell "Warehouse B-17" [ref=e513]
+                - cell "Adequate" [ref=e514]:
+                  - generic [ref=e515]: Adequate
+              - row "PSU-507 Adjustable Bench Power Supply Power Supplies 95 80 $125.00 $11,875.00 Warehouse A-17 Adequate" [ref=e516] [cursor=pointer]:
+                - cell "PSU-507" [ref=e517]:
+                  - strong [ref=e518]: PSU-507
+                - cell "Adjustable Bench Power Supply" [ref=e519]
+                - cell "Power Supplies" [ref=e520]
+                - cell "95" [ref=e521]:
+                  - strong [ref=e522]: "95"
+                - cell "80" [ref=e523]
+                - cell "$125.00" [ref=e524]
+                - cell "$11,875.00" [ref=e525]:
+                  - strong [ref=e526]: $11,875.00
+                - cell "Warehouse A-17" [ref=e527]
+                - cell "Adequate" [ref=e528]:
+                  - generic [ref=e529]: Adequate
+              - row "PCB-001 Single Layer PCB Assembly Circuit Boards 450 200 $24.99 $11,245.50 Warehouse A-12 In Stock" [ref=e530] [cursor=pointer]:
+                - cell "PCB-001" [ref=e531]:
+                  - strong [ref=e532]: PCB-001
+                - cell "Single Layer PCB Assembly" [ref=e533]
+                - cell "Circuit Boards" [ref=e534]
+                - cell "450" [ref=e535]:
+                  - strong [ref=e536]: "450"
+                - cell "200" [ref=e537]
+                - cell "$24.99" [ref=e538]
+                - cell "$11,245.50" [ref=e539]:
+                  - strong [ref=e540]: $11,245.50
+                - cell "Warehouse A-12" [ref=e541]
+                - cell "In Stock" [ref=e542]:
+                  - generic [ref=e543]: In Stock
+              - row "PCB-002 Dual Layer PCB Assembly Circuit Boards 320 150 $29.99 $9,596.80 Warehouse A-13 In Stock" [ref=e544] [cursor=pointer]:
+                - cell "PCB-002" [ref=e545]:
+                  - strong [ref=e546]: PCB-002
+                - cell "Dual Layer PCB Assembly" [ref=e547]
+                - cell "Circuit Boards" [ref=e548]
+                - cell "320" [ref=e549]:
+                  - strong [ref=e550]: "320"
+                - cell "150" [ref=e551]
+                - cell "$29.99" [ref=e552]
+                - cell "$9,596.80" [ref=e553]:
+                  - strong [ref=e554]: $9,596.80
+                - cell "Warehouse A-13" [ref=e555]
+                - cell "In Stock" [ref=e556]:
+                  - generic [ref=e557]: In Stock
+              - row "PCB-003 Multi Layer PCB Assembly Circuit Boards 275 120 $34.50 $9,487.50 Warehouse B-08 In Stock" [ref=e558] [cursor=pointer]:
+                - cell "PCB-003" [ref=e559]:
+                  - strong [ref=e560]: PCB-003
+                - cell "Multi Layer PCB Assembly" [ref=e561]
+                - cell "Circuit Boards" [ref=e562]
+                - cell "275" [ref=e563]:
+                  - strong [ref=e564]: "275"
+                - cell "120" [ref=e565]
+                - cell "$34.50" [ref=e566]
+                - cell "$9,487.50" [ref=e567]:
+                  - strong [ref=e568]: $9,487.50
+                - cell "Warehouse B-08" [ref=e569]
+                - cell "In Stock" [ref=e570]:
+                  - generic [ref=e571]: In Stock
+              - row "PRS-203 Pressure Sensor Module Sensors 850 300 $12.75 $10,837.50 Warehouse A-08 In Stock" [ref=e572] [cursor=pointer]:
+                - cell "PRS-203" [ref=e573]:
+                  - strong [ref=e574]: PRS-203
+                - cell "Pressure Sensor Module" [ref=e575]
+                - cell "Sensors" [ref=e576]
+                - cell "850" [ref=e577]:
+                  - strong [ref=e578]: "850"
+                - cell "300" [ref=e579]
+                - cell "$12.75" [ref=e580]
+                - cell "$10,837.50" [ref=e581]:
+                  - strong [ref=e582]: $10,837.50
+                - cell "Warehouse A-08" [ref=e583]
+                - cell "In Stock" [ref=e584]:
+                  - generic [ref=e585]: In Stock
+              - row "PRX-204 Proximity Sensor Sensors 1200 400 $8.50 $10,200.00 Warehouse C-04 In Stock" [ref=e586] [cursor=pointer]:
+                - cell "PRX-204" [ref=e587]:
+                  - strong [ref=e588]: PRX-204
+                - cell "Proximity Sensor" [ref=e589]
+                - cell "Sensors" [ref=e590]
+                - cell "1200" [ref=e591]:
+                  - strong [ref=e592]: "1200"
+                - cell "400" [ref=e593]
+                - cell "$8.50" [ref=e594]
+                - cell "$10,200.00" [ref=e595]:
+                  - strong [ref=e596]: $10,200.00
+                - cell "Warehouse C-04" [ref=e597]
+                - cell "In Stock" [ref=e598]:
+                  - generic [ref=e599]: In Stock
+              - row "ULS-205 Ultrasonic Distance Sensor Sensors 680 250 $15.99 $10,873.20 Warehouse A-09 In Stock" [ref=e600] [cursor=pointer]:
+                - cell "ULS-205" [ref=e601]:
+                  - strong [ref=e602]: ULS-205
+                - cell "Ultrasonic Distance Sensor" [ref=e603]
+                - cell "Sensors" [ref=e604]
+                - cell "680" [ref=e605]:
+                  - strong [ref=e606]: "680"
+                - cell "250" [ref=e607]
+                - cell "$15.99" [ref=e608]
+                - cell "$10,873.20" [ref=e609]:
+                  - strong [ref=e610]: $10,873.20
+                - cell "Warehouse A-09" [ref=e611]
+                - cell "In Stock" [ref=e612]:
+                  - generic [ref=e613]: In Stock
+              - row "STP-303 Stepper Motor NEMA 17 Actuators 62 40 $325.00 $20,150.00 Warehouse B-10 In Stock" [ref=e614] [cursor=pointer]:
+                - cell "STP-303" [ref=e615]:
+                  - strong [ref=e616]: STP-303
+                - cell "Stepper Motor NEMA 17" [ref=e617]
+                - cell "Actuators" [ref=e618]
+                - cell "62" [ref=e619]:
+                  - strong [ref=e620]: "62"
+                - cell "40" [ref=e621]
+                - cell "$325.00" [ref=e622]
+                - cell "$20,150.00" [ref=e623]:
+                  - strong [ref=e624]: $20,150.00
+                - cell "Warehouse B-10" [ref=e625]
+                - cell "In Stock" [ref=e626]:
+                  - generic [ref=e627]: In Stock
+              - row "MCU-401 8-bit Microcontroller Controllers 1200 500 $8.25 $9,900.00 Warehouse A-15 In Stock" [ref=e628] [cursor=pointer]:
+                - cell "MCU-401" [ref=e629]:
+                  - strong [ref=e630]: MCU-401
+                - cell "8-bit Microcontroller" [ref=e631]
+                - cell "Controllers" [ref=e632]
+                - cell "1200" [ref=e633]:
+                  - strong [ref=e634]: "1200"
+                - cell "500" [ref=e635]
+                - cell "$8.25" [ref=e636]
+                - cell "$9,900.00" [ref=e637]:
+                  - strong [ref=e638]: $9,900.00
+                - cell "Warehouse A-15" [ref=e639]
+                - cell "In Stock" [ref=e640]:
+                  - generic [ref=e641]: In Stock
+              - row "MCU-402 32-bit ARM Microcontroller Controllers 980 400 $6.50 $6,370.00 Warehouse A-16 In Stock" [ref=e642] [cursor=pointer]:
+                - cell "MCU-402" [ref=e643]:
+                  - strong [ref=e644]: MCU-402
+                - cell "32-bit ARM Microcontroller" [ref=e645]
+                - cell "Controllers" [ref=e646]
+                - cell "980" [ref=e647]:
+                  - strong [ref=e648]: "980"
+                - cell "400" [ref=e649]
+                - cell "$6.50" [ref=e650]
+                - cell "$6,370.00" [ref=e651]:
+                  - strong [ref=e652]: $6,370.00
+                - cell "Warehouse A-16" [ref=e653]
+                - cell "In Stock" [ref=e654]:
+                  - generic [ref=e655]: In Stock
+              - row "DSP-403 Digital Signal Processor Controllers 750 350 $7.75 $5,812.50 Warehouse B-12 In Stock" [ref=e656] [cursor=pointer]:
+                - cell "DSP-403" [ref=e657]:
+                  - strong [ref=e658]: DSP-403
+                - cell "Digital Signal Processor" [ref=e659]
+                - cell "Controllers" [ref=e660]
+                - cell "750" [ref=e661]:
+                  - strong [ref=e662]: "750"
+                - cell "350" [ref=e663]
+                - cell "$7.75" [ref=e664]
+                - cell "$5,812.50" [ref=e665]:
+                  - strong [ref=e666]: $5,812.50
+                - cell "Warehouse B-12" [ref=e667]
+                - cell "In Stock" [ref=e668]:
+                  - generic [ref=e669]: In Stock
+              - row "ACC-206 3-Axis Accelerometer Sensors 180 100 $156.00 $28,080.00 Warehouse B-11 In Stock" [ref=e670] [cursor=pointer]:
+                - cell "ACC-206" [ref=e671]:
+                  - strong [ref=e672]: ACC-206
+                - cell "3-Axis Accelerometer" [ref=e673]
+                - cell "Sensors" [ref=e674]
+                - cell "180" [ref=e675]:
+                  - strong [ref=e676]: "180"
+                - cell "100" [ref=e677]
+                - cell "$156.00" [ref=e678]
+                - cell "$28,080.00" [ref=e679]:
+                  - strong [ref=e680]: $28,080.00
+                - cell "Warehouse B-11" [ref=e681]
+                - cell "In Stock" [ref=e682]:
+                  - generic [ref=e683]: In Stock
+              - row "GYR-207 Gyroscope Module Sensors 240 120 $95.00 $22,800.00 Warehouse C-07 In Stock" [ref=e684] [cursor=pointer]:
+                - cell "GYR-207" [ref=e685]:
+                  - strong [ref=e686]: GYR-207
+                - cell "Gyroscope Module" [ref=e687]
+                - cell "Sensors" [ref=e688]
+                - cell "240" [ref=e689]:
+                  - strong [ref=e690]: "240"
+                - cell "120" [ref=e691]
+                - cell "$95.00" [ref=e692]
+                - cell "$22,800.00" [ref=e693]:
+                  - strong [ref=e694]: $22,800.00
+                - cell "Warehouse C-07" [ref=e695]
+                - cell "In Stock" [ref=e696]:
+                  - generic [ref=e697]: In Stock
+              - row "LDR-208 Light Dependent Resistor Sensors 165 90 $110.50 $18,232.50 Warehouse A-14 In Stock" [ref=e698] [cursor=pointer]:
+                - cell "LDR-208" [ref=e699]:
+                  - strong [ref=e700]: LDR-208
+                - cell "Light Dependent Resistor" [ref=e701]
+                - cell "Sensors" [ref=e702]
+                - cell "165" [ref=e703]:
+                  - strong [ref=e704]: "165"
+                - cell "90" [ref=e705]
+                - cell "$110.50" [ref=e706]
+                - cell "$18,232.50" [ref=e707]:
+                  - strong [ref=e708]: $18,232.50
+                - cell "Warehouse A-14" [ref=e709]
+                - cell "In Stock" [ref=e710]:
+                  - generic [ref=e711]: In Stock
+              - row "SPR-601 Coil Spring Heavy Duty Sensors 420 200 $18.75 $7,875.00 Warehouse B-09 In Stock" [ref=e712] [cursor=pointer]:
+                - cell "SPR-601" [ref=e713]:
+                  - strong [ref=e714]: SPR-601
+                - cell "Coil Spring Heavy Duty" [ref=e715]
+                - cell "Sensors" [ref=e716]
+                - cell "420" [ref=e717]:
+                  - strong [ref=e718]: "420"
+                - cell "200" [ref=e719]
+                - cell "$18.75" [ref=e720]
+                - cell "$7,875.00" [ref=e721]:
+                  - strong [ref=e722]: $7,875.00
+                - cell "Warehouse B-09" [ref=e723]
+                - cell "In Stock" [ref=e724]:
+                  - generic [ref=e725]: In Stock
+              - row "SPR-602 Compression Spring Sensors 890 350 $12.25 $10,902.50 Warehouse A-11 In Stock" [ref=e726] [cursor=pointer]:
+                - cell "SPR-602" [ref=e727]:
+                  - strong [ref=e728]: SPR-602
+                - cell "Compression Spring" [ref=e729]
+                - cell "Sensors" [ref=e730]
+                - cell "890" [ref=e731]:
+                  - strong [ref=e732]: "890"
+                - cell "350" [ref=e733]
+                - cell "$12.25" [ref=e734]
+                - cell "$10,902.50" [ref=e735]:
+                  - strong [ref=e736]: $10,902.50
+                - cell "Warehouse A-11" [ref=e737]
+                - cell "In Stock" [ref=e738]:
+                  - generic [ref=e739]: In Stock
+              - row "PWM-404 PWM Motor Controller Controllers 1500 600 $15.50 $23,250.00 Warehouse C-05 In Stock" [ref=e740] [cursor=pointer]:
+                - cell "PWM-404" [ref=e741]:
+                  - strong [ref=e742]: PWM-404
+                - cell "PWM Motor Controller" [ref=e743]
+                - cell "Controllers" [ref=e744]
+                - cell "1500" [ref=e745]:
+                  - strong [ref=e746]: "1500"
+                - cell "600" [ref=e747]
+                - cell "$15.50" [ref=e748]
+                - cell "$23,250.00" [ref=e749]:
+                  - strong [ref=e750]: $23,250.00
+                - cell "Warehouse C-05" [ref=e751]
+                - cell "In Stock" [ref=e752]:
+                  - generic [ref=e753]: In Stock
+              - row "DRV-405 H-Bridge Motor Driver Controllers 1100 500 $22.00 $24,200.00 Warehouse B-13 In Stock" [ref=e754] [cursor=pointer]:
+                - cell "DRV-405" [ref=e755]:
+                  - strong [ref=e756]: DRV-405
+                - cell "H-Bridge Motor Driver" [ref=e757]
+                - cell "Controllers" [ref=e758]
+                - cell "1100" [ref=e759]:
+                  - strong [ref=e760]: "1100"
+                - cell "500" [ref=e761]
+                - cell "$22.00" [ref=e762]
+                - cell "$24,200.00" [ref=e763]:
+                  - strong [ref=e764]: $24,200.00
+                - cell "Warehouse B-13" [ref=e765]
+                - cell "In Stock" [ref=e766]:
+                  - generic [ref=e767]: In Stock
+              - row "PLY-901 Drive Pulley Sensors 310 150 $45.50 $14,105.00 Warehouse A-10 In Stock" [ref=e768] [cursor=pointer]:
+                - cell "PLY-901" [ref=e769]:
+                  - strong [ref=e770]: PLY-901
+                - cell "Drive Pulley" [ref=e771]
+                - cell "Sensors" [ref=e772]
+                - cell "310" [ref=e773]:
+                  - strong [ref=e774]: "310"
+                - cell "150" [ref=e775]
+                - cell "$45.50" [ref=e776]
+                - cell "$14,105.00" [ref=e777]:
+                  - strong [ref=e778]: $14,105.00
+                - cell "Warehouse A-10" [ref=e779]
+                - cell "In Stock" [ref=e780]:
+                  - generic [ref=e781]: In Stock
+              - row "LED-406 LED Driver IC Controllers 580 250 $32.75 $18,995.00 Warehouse B-14 In Stock" [ref=e782] [cursor=pointer]:
+                - cell "LED-406" [ref=e783]:
+                  - strong [ref=e784]: LED-406
+                - cell "LED Driver IC" [ref=e785]
+                - cell "Controllers" [ref=e786]
+                - cell "580" [ref=e787]:
+                  - strong [ref=e788]: "580"
+                - cell "250" [ref=e789]
+                - cell "$32.75" [ref=e790]
+                - cell "$18,995.00" [ref=e791]:
+                  - strong [ref=e792]: $18,995.00
+                - cell "Warehouse B-14" [ref=e793]
+                - cell "In Stock" [ref=e794]:
+                  - generic [ref=e795]: In Stock
+              - row "PSU-501 5V 10A Switching Power Supply Power Supplies 420 180 $18.99 $7,975.80 Warehouse A-15 In Stock" [ref=e796] [cursor=pointer]:
+                - cell "PSU-501" [ref=e797]:
+                  - strong [ref=e798]: PSU-501
+                - cell "5V 10A Switching Power Supply" [ref=e799]
+                - cell "Power Supplies" [ref=e800]
+                - cell "420" [ref=e801]:
+                  - strong [ref=e802]: "420"
+                - cell "180" [ref=e803]
+                - cell "$18.99" [ref=e804]
+                - cell "$7,975.80" [ref=e805]:
+                  - strong [ref=e806]: $7,975.80
+                - cell "Warehouse A-15" [ref=e807]
+                - cell "In Stock" [ref=e808]:
+                  - generic [ref=e809]: In Stock
+              - row "PSU-502 12V 5A Power Supply Module Power Supplies 350 200 $22.50 $7,875.00 Warehouse B-16 In Stock" [ref=e810] [cursor=pointer]:
+                - cell "PSU-502" [ref=e811]:
+                  - strong [ref=e812]: PSU-502
+                - cell "12V 5A Power Supply Module" [ref=e813]
+                - cell "Power Supplies" [ref=e814]
+                - cell "350" [ref=e815]:
+                  - strong [ref=e816]: "350"
+                - cell "200" [ref=e817]
+                - cell "$22.50" [ref=e818]
+                - cell "$7,875.00" [ref=e819]:
+                  - strong [ref=e820]: $7,875.00
+                - cell "Warehouse B-16" [ref=e821]
+                - cell "In Stock" [ref=e822]:
+                  - generic [ref=e823]: In Stock
+              - row "PSU-503 24V 3A Industrial Power Supply Power Supplies 280 150 $45.75 $12,810.00 Warehouse C-09 In Stock" [ref=e824] [cursor=pointer]:
+                - cell "PSU-503" [ref=e825]:
+                  - strong [ref=e826]: PSU-503
+                - cell "24V 3A Industrial Power Supply" [ref=e827]
+                - cell "Power Supplies" [ref=e828]
+                - cell "280" [ref=e829]:
+                  - strong [ref=e830]: "280"
+                - cell "150" [ref=e831]
+                - cell "$45.75" [ref=e832]
+                - cell "$12,810.00" [ref=e833]:
+                  - strong [ref=e834]: $12,810.00
+                - cell "Warehouse C-09" [ref=e835]
+                - cell "In Stock" [ref=e836]:
+                  - generic [ref=e837]: In Stock
+              - row "PSU-504 Dual Output ±15V Power Supply Power Supplies 190 100 $38.25 $7,267.50 Warehouse A-16 In Stock" [ref=e838] [cursor=pointer]:
+                - cell "PSU-504" [ref=e839]:
+                  - strong [ref=e840]: PSU-504
+                - cell "Dual Output ±15V Power Supply" [ref=e841]
+                - cell "Power Supplies" [ref=e842]
+                - cell "190" [ref=e843]:
+                  - strong [ref=e844]: "190"
+                - cell "100" [ref=e845]
+                - cell "$38.25" [ref=e846]
+                - cell "$7,267.50" [ref=e847]:
+                  - strong [ref=e848]: $7,267.50
+                - cell "Warehouse A-16" [ref=e849]
+                - cell "In Stock" [ref=e850]:
+                  - generic [ref=e851]: In Stock
+              - row "PSU-506 USB-C PD 100W Power Supply Power Supplies 520 250 $29.99 $15,594.80 Warehouse C-10 In Stock" [ref=e852] [cursor=pointer]:
+                - cell "PSU-506" [ref=e853]:
+                  - strong [ref=e854]: PSU-506
+                - cell "USB-C PD 100W Power Supply" [ref=e855]
+                - cell "Power Supplies" [ref=e856]
+                - cell "520" [ref=e857]:
+                  - strong [ref=e858]: "520"
+                - cell "250" [ref=e859]
+                - cell "$29.99" [ref=e860]
+                - cell "$15,594.80" [ref=e861]:
+                  - strong [ref=e862]: $15,594.80
+                - cell "Warehouse C-10" [ref=e863]
+                - cell "In Stock" [ref=e864]:
+                  - generic [ref=e865]: In Stock

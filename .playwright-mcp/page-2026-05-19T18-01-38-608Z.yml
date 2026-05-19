@@ -1,0 +1,251 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: CC
+      - generic [ref=e7]:
+        - generic [ref=e8]: Catalyst Components
+        - generic [ref=e9]: Inventory Management System
+      - button "Collapse sidebar" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+    - navigation [ref=e13]:
+      - link "Overview" [ref=e14] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e15]: Overview
+      - link "Inventory" [ref=e16] [cursor=pointer]:
+        - /url: /inventory
+        - generic [ref=e17]: Inventory
+      - link "Orders" [ref=e18] [cursor=pointer]:
+        - /url: /orders
+        - generic [ref=e19]: Orders
+      - link "Finance" [ref=e20] [cursor=pointer]:
+        - /url: /spending
+        - generic [ref=e21]: Finance
+      - link "Demand Forecast" [active] [ref=e22] [cursor=pointer]:
+        - /url: /demand
+        - generic [ref=e23]: Demand Forecast
+      - link "Restocking" [ref=e24] [cursor=pointer]:
+        - /url: /restocking
+        - generic [ref=e25]: Restocking
+      - link "Reports" [ref=e26] [cursor=pointer]:
+        - /url: /reports
+        - generic [ref=e27]: Reports
+    - generic [ref=e28]:
+      - button "English" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e35]: English
+        - img [ref=e36]
+      - button "JD John Doe" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: JD
+        - generic [ref=e41]: John Doe
+        - img [ref=e42]
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Time Period
+          - combobox [ref=e50] [cursor=pointer]:
+            - option "All Months" [selected]
+            - option "January"
+            - option "February"
+            - option "March"
+            - option "April"
+            - option "May"
+            - option "June"
+            - option "July"
+            - option "August"
+            - option "September"
+            - option "October"
+            - option "November"
+            - option "December"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Location
+          - combobox [ref=e53] [cursor=pointer]:
+            - option "All" [selected]
+            - option "San Francisco"
+            - option "London"
+            - option "Tokyo"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Category
+          - combobox [ref=e56] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Circuit Boards"
+            - option "Sensors"
+            - option "Actuators"
+            - option "Controllers"
+            - option "Power Supplies"
+        - generic [ref=e57]:
+          - generic [ref=e58]: Order Status
+          - combobox [ref=e59] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Delivered"
+            - option "Shipped"
+            - option "Processing"
+            - option "Backordered"
+      - button "Reset all filters" [disabled] [ref=e60]:
+        - img [ref=e61]
+    - main [ref=e63]:
+      - generic [ref=e4745]:
+        - generic [ref=e4746]:
+          - heading "Demand Forecast" [level=2] [ref=e4747]
+          - paragraph [ref=e4748]: Analyze demand trends and forecasts
+        - generic [ref=e4749]:
+          - generic [ref=e4750]:
+            - generic [ref=e4751]:
+              - generic [ref=e4752]:
+                - generic [ref=e4753]: ↑
+                - generic [ref=e4754]:
+                  - generic [ref=e4755]: Increasing Demand
+                  - generic [ref=e4756]: 3 items
+              - generic [ref=e4757]:
+                - generic [ref=e4758]:
+                  - generic [ref=e4759]: Industrial Widget Type A
+                  - generic [ref=e4760]: ++50.0%
+                - generic [ref=e4761]:
+                  - generic [ref=e4762]: High-Temperature Gasket
+                  - generic [ref=e4763]: ++20.0%
+                - generic [ref=e4764]:
+                  - generic [ref=e4765]: Oil Filter Cartridge
+                  - generic [ref=e4766]: ++18.8%
+            - generic [ref=e4767]:
+              - generic [ref=e4768]:
+                - generic [ref=e4769]: →
+                - generic [ref=e4770]:
+                  - generic [ref=e4771]: Stable Demand
+                  - generic [ref=e4772]: 5 items
+              - generic [ref=e4773]:
+                - generic [ref=e4774]:
+                  - generic [ref=e4775]: Steel Bearing Assembly
+                  - generic [ref=e4776]: +1.3%
+                - generic [ref=e4777]:
+                  - generic [ref=e4778]: Pressure Relief Valve
+                  - generic [ref=e4779]: +0.8%
+                - generic [ref=e4780]:
+                  - generic [ref=e4781]: 5V 10A Switching Power Supply
+                  - generic [ref=e4782]: +0.8%
+                - generic [ref=e4783]:
+                  - generic [ref=e4784]: Temperature Sensor Module
+                  - generic [ref=e4785]: +1.1%
+                - generic [ref=e4786]:
+                  - generic [ref=e4787]: Logic Controller Board
+                  - generic [ref=e4788]: +1.1%
+            - generic [ref=e4789]:
+              - generic [ref=e4790]:
+                - generic [ref=e4791]: ↓
+                - generic [ref=e4792]:
+                  - generic [ref=e4793]: Decreasing Demand
+                  - generic [ref=e4794]: 1 items
+              - generic [ref=e4796]:
+                - generic [ref=e4797]: Electric Motor 5HP
+                - generic [ref=e4798]: "-30.0%"
+          - generic [ref=e4799]:
+            - heading "Demand Forecasts" [level=3] [ref=e4801]
+            - table [ref=e4803]:
+              - rowgroup [ref=e4804]:
+                - row "SKU Item Name Current Demand Forecasted Demand Change Trend Period" [ref=e4805]:
+                  - columnheader "SKU" [ref=e4806]
+                  - columnheader "Item Name" [ref=e4807]
+                  - columnheader "Current Demand" [ref=e4808]
+                  - columnheader "Forecasted Demand" [ref=e4809]
+                  - columnheader "Change" [ref=e4810]
+                  - columnheader "Trend" [ref=e4811]
+                  - columnheader "Period" [ref=e4812]
+              - rowgroup [ref=e4813]:
+                - row "WDG-001 Industrial Widget Type A 300 450 +50.0% increasing Next 30 days" [ref=e4814]:
+                  - cell "WDG-001" [ref=e4815]:
+                    - strong [ref=e4816]: WDG-001
+                  - cell "Industrial Widget Type A" [ref=e4817]
+                  - cell "300" [ref=e4818]
+                  - cell "450" [ref=e4819]:
+                    - strong [ref=e4820]: "450"
+                  - cell "+50.0%" [ref=e4821]
+                  - cell "increasing" [ref=e4822]:
+                    - generic [ref=e4823]: increasing
+                  - cell "Next 30 days" [ref=e4824]
+                - row "BRG-102 Steel Bearing Assembly 150 152 +1.3% stable Next 30 days" [ref=e4825]:
+                  - cell "BRG-102" [ref=e4826]:
+                    - strong [ref=e4827]: BRG-102
+                  - cell "Steel Bearing Assembly" [ref=e4828]
+                  - cell "150" [ref=e4829]
+                  - cell "152" [ref=e4830]:
+                    - strong [ref=e4831]: "152"
+                  - cell "+1.3%" [ref=e4832]
+                  - cell "stable" [ref=e4833]:
+                    - generic [ref=e4834]: stable
+                  - cell "Next 30 days" [ref=e4835]
+                - row "GSK-203 High-Temperature Gasket 500 600 +20.0% increasing Next 30 days" [ref=e4836]:
+                  - cell "GSK-203" [ref=e4837]:
+                    - strong [ref=e4838]: GSK-203
+                  - cell "High-Temperature Gasket" [ref=e4839]
+                  - cell "500" [ref=e4840]
+                  - cell "600" [ref=e4841]:
+                    - strong [ref=e4842]: "600"
+                  - cell "+20.0%" [ref=e4843]
+                  - cell "increasing" [ref=e4844]:
+                    - generic [ref=e4845]: increasing
+                  - cell "Next 30 days" [ref=e4846]
+                - row "MTR-304 Electric Motor 5HP 50 35 -30.0% decreasing Next 30 days" [ref=e4847]:
+                  - cell "MTR-304" [ref=e4848]:
+                    - strong [ref=e4849]: MTR-304
+                  - cell "Electric Motor 5HP" [ref=e4850]
+                  - cell "50" [ref=e4851]
+                  - cell "35" [ref=e4852]:
+                    - strong [ref=e4853]: "35"
+                  - cell "-30.0%" [ref=e4854]
+                  - cell "decreasing" [ref=e4855]:
+                    - generic [ref=e4856]: decreasing
+                  - cell "Next 30 days" [ref=e4857]
+                - row "FLT-405 Oil Filter Cartridge 800 950 +18.8% increasing Next 30 days" [ref=e4858]:
+                  - cell "FLT-405" [ref=e4859]:
+                    - strong [ref=e4860]: FLT-405
+                  - cell "Oil Filter Cartridge" [ref=e4861]
+                  - cell "800" [ref=e4862]
+                  - cell "950" [ref=e4863]:
+                    - strong [ref=e4864]: "950"
+                  - cell "+18.8%" [ref=e4865]
+                  - cell "increasing" [ref=e4866]:
+                    - generic [ref=e4867]: increasing
+                  - cell "Next 30 days" [ref=e4868]
+                - row "VLV-506 Pressure Relief Valve 120 121 +0.8% stable Next 30 days" [ref=e4869]:
+                  - cell "VLV-506" [ref=e4870]:
+                    - strong [ref=e4871]: VLV-506
+                  - cell "Pressure Relief Valve" [ref=e4872]
+                  - cell "120" [ref=e4873]
+                  - cell "121" [ref=e4874]:
+                    - strong [ref=e4875]: "121"
+                  - cell "+0.8%" [ref=e4876]
+                  - cell "stable" [ref=e4877]:
+                    - generic [ref=e4878]: stable
+                  - cell "Next 30 days" [ref=e4879]
+                - row "PSU-501 5V 10A Switching Power Supply 250 252 +0.8% stable Next 30 days" [ref=e4880]:
+                  - cell "PSU-501" [ref=e4881]:
+                    - strong [ref=e4882]: PSU-501
+                  - cell "5V 10A Switching Power Supply" [ref=e4883]
+                  - cell "250" [ref=e4884]
+                  - cell "252" [ref=e4885]:
+                    - strong [ref=e4886]: "252"
+                  - cell "+0.8%" [ref=e4887]
+                  - cell "stable" [ref=e4888]:
+                    - generic [ref=e4889]: stable
+                  - cell "Next 30 days" [ref=e4890]
+                - row "SNR-420 Temperature Sensor Module 180 182 +1.1% stable Next 30 days" [ref=e4891]:
+                  - cell "SNR-420" [ref=e4892]:
+                    - strong [ref=e4893]: SNR-420
+                  - cell "Temperature Sensor Module" [ref=e4894]
+                  - cell "180" [ref=e4895]
+                  - cell "182" [ref=e4896]:
+                    - strong [ref=e4897]: "182"
+                  - cell "+1.1%" [ref=e4898]
+                  - cell "stable" [ref=e4899]:
+                    - generic [ref=e4900]: stable
+                  - cell "Next 30 days" [ref=e4901]
+                - row "CTL-330 Logic Controller Board 95 96 +1.1% stable Next 30 days" [ref=e4902]:
+                  - cell "CTL-330" [ref=e4903]:
+                    - strong [ref=e4904]: CTL-330
+                  - cell "Logic Controller Board" [ref=e4905]
+                  - cell "95" [ref=e4906]
+                  - cell "96" [ref=e4907]:
+                    - strong [ref=e4908]: "96"
+                  - cell "+1.1%" [ref=e4909]
+                  - cell "stable" [ref=e4910]:
+                    - generic [ref=e4911]: stable
+                  - cell "Next 30 days" [ref=e4912]

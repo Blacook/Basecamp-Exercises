@@ -1,0 +1,173 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: CC
+      - generic [ref=e7]:
+        - generic [ref=e8]: Catalyst Components
+        - generic [ref=e9]: Inventory Management System
+      - button "Collapse sidebar" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+    - navigation [ref=e13]:
+      - link "Overview" [ref=e14] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e15]: Overview
+      - link "Inventory" [ref=e16] [cursor=pointer]:
+        - /url: /inventory
+        - generic [ref=e17]: Inventory
+      - link "Orders" [ref=e18] [cursor=pointer]:
+        - /url: /orders
+        - generic [ref=e19]: Orders
+      - link "Finance" [ref=e20] [cursor=pointer]:
+        - /url: /spending
+        - generic [ref=e21]: Finance
+      - link "Demand Forecast" [ref=e22] [cursor=pointer]:
+        - /url: /demand
+        - generic [ref=e23]: Demand Forecast
+      - link "Restocking" [active] [ref=e24] [cursor=pointer]:
+        - /url: /restocking
+        - generic [ref=e25]: Restocking
+      - link "Reports" [ref=e26] [cursor=pointer]:
+        - /url: /reports
+        - generic [ref=e27]: Reports
+    - generic [ref=e28]:
+      - button "English" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e35]: English
+        - img [ref=e36]
+      - button "JD John Doe" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: JD
+        - generic [ref=e41]: John Doe
+        - img [ref=e42]
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Time Period
+          - combobox [ref=e50] [cursor=pointer]:
+            - option "All Months" [selected]
+            - option "January"
+            - option "February"
+            - option "March"
+            - option "April"
+            - option "May"
+            - option "June"
+            - option "July"
+            - option "August"
+            - option "September"
+            - option "October"
+            - option "November"
+            - option "December"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Location
+          - combobox [ref=e53] [cursor=pointer]:
+            - option "All" [selected]
+            - option "San Francisco"
+            - option "London"
+            - option "Tokyo"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Category
+          - combobox [ref=e56] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Circuit Boards"
+            - option "Sensors"
+            - option "Actuators"
+            - option "Controllers"
+            - option "Power Supplies"
+        - generic [ref=e57]:
+          - generic [ref=e58]: Order Status
+          - combobox [ref=e59] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Delivered"
+            - option "Shipped"
+            - option "Processing"
+            - option "Backordered"
+      - button "Reset all filters" [disabled] [ref=e60]:
+        - img [ref=e61]
+    - main [ref=e63]:
+      - generic [ref=e4913]:
+        - generic [ref=e4914]:
+          - heading "Restocking Planner" [level=2] [ref=e4915]
+          - paragraph [ref=e4916]: Allocate your budget to restock high-demand items
+        - generic [ref=e4917]:
+          - generic [ref=e4918]:
+            - generic [ref=e4919]:
+              - heading "Available Budget" [level=3] [ref=e4920]
+              - generic [ref=e4921]: $1,200
+            - generic [ref=e4923]:
+              - generic [ref=e4924]: $0
+              - slider [ref=e4925] [cursor=pointer]: "1200"
+              - generic [ref=e4926]: $4,800
+          - generic [ref=e4927]:
+            - generic [ref=e4928]:
+              - heading "Recommended Items (8)" [level=3] [ref=e4929]
+              - generic [ref=e4930]:
+                - generic [ref=e4931]: "Total Spend:"
+                - generic [ref=e4932]: $0
+                - generic [ref=e4933]: "Remaining:"
+                - generic [ref=e4934]: $1,200
+            - table [ref=e4936]:
+              - rowgroup [ref=e4937]:
+                - row "SKU Item Qty to Restock Unit Cost Total Cost" [ref=e4938]:
+                  - columnheader "SKU" [ref=e4939]
+                  - columnheader "Item" [ref=e4940]
+                  - columnheader "Qty to Restock" [ref=e4941]
+                  - columnheader "Unit Cost" [ref=e4942]
+                  - columnheader "Total Cost" [ref=e4943]
+              - rowgroup [ref=e4944]:
+                - row "FLT-405 Oil Filter Cartridge 950 $0.00 $0" [ref=e4945]:
+                  - cell "FLT-405" [ref=e4946]
+                  - cell "Oil Filter Cartridge" [ref=e4947]
+                  - cell "950" [ref=e4948]
+                  - cell "$0.00" [ref=e4949]
+                  - cell "$0" [ref=e4950]:
+                    - strong [ref=e4951]: $0
+                - row "GSK-203 High-Temperature Gasket 600 $0.00 $0" [ref=e4952]:
+                  - cell "GSK-203" [ref=e4953]
+                  - cell "High-Temperature Gasket" [ref=e4954]
+                  - cell "600" [ref=e4955]
+                  - cell "$0.00" [ref=e4956]
+                  - cell "$0" [ref=e4957]:
+                    - strong [ref=e4958]: $0
+                - row "WDG-001 Industrial Widget Type A 450 $0.00 $0" [ref=e4959]:
+                  - cell "WDG-001" [ref=e4960]
+                  - cell "Industrial Widget Type A" [ref=e4961]
+                  - cell "450" [ref=e4962]
+                  - cell "$0.00" [ref=e4963]
+                  - cell "$0" [ref=e4964]:
+                    - strong [ref=e4965]: $0
+                - row "SNR-420 Temperature Sensor Module 182 $0.00 $0" [ref=e4966]:
+                  - cell "SNR-420" [ref=e4967]
+                  - cell "Temperature Sensor Module" [ref=e4968]
+                  - cell "182" [ref=e4969]
+                  - cell "$0.00" [ref=e4970]
+                  - cell "$0" [ref=e4971]:
+                    - strong [ref=e4972]: $0
+                - row "BRG-102 Steel Bearing Assembly 152 $0.00 $0" [ref=e4973]:
+                  - cell "BRG-102" [ref=e4974]
+                  - cell "Steel Bearing Assembly" [ref=e4975]
+                  - cell "152" [ref=e4976]
+                  - cell "$0.00" [ref=e4977]
+                  - cell "$0" [ref=e4978]:
+                    - strong [ref=e4979]: $0
+                - row "VLV-506 Pressure Relief Valve 121 $0.00 $0" [ref=e4980]:
+                  - cell "VLV-506" [ref=e4981]
+                  - cell "Pressure Relief Valve" [ref=e4982]
+                  - cell "121" [ref=e4983]
+                  - cell "$0.00" [ref=e4984]
+                  - cell "$0" [ref=e4985]:
+                    - strong [ref=e4986]: $0
+                - row "CTL-330 Logic Controller Board 96 $0.00 $0" [ref=e4987]:
+                  - cell "CTL-330" [ref=e4988]
+                  - cell "Logic Controller Board" [ref=e4989]
+                  - cell "96" [ref=e4990]
+                  - cell "$0.00" [ref=e4991]
+                  - cell "$0" [ref=e4992]:
+                    - strong [ref=e4993]: $0
+                - row "MTR-304 Electric Motor 5HP 35 $0.00 $0" [ref=e4994]:
+                  - cell "MTR-304" [ref=e4995]
+                  - cell "Electric Motor 5HP" [ref=e4996]
+                  - cell "35" [ref=e4997]
+                  - cell "$0.00" [ref=e4998]
+                  - cell "$0" [ref=e4999]:
+                    - strong [ref=e5000]: $0
+            - button "Place Order" [ref=e5002] [cursor=pointer]

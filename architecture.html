@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basecamp Exercises — Architecture Overview</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3350;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --accent3: #f97316;
+      --accent4: #3b82f6;
+      --text: #e2e8f0;
+      --muted: #8892aa;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #eab308;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0d1020 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 3rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #6c63ff, #00d4aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p {
+      color: var(--muted);
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+    }
+    .header-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+    }
+    .dot-green { background: var(--green); }
+    .dot-purple { background: var(--accent); }
+    .dot-teal { background: var(--accent2); }
+
+    /* Layout */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    section-title {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .card-title .icon {
+      width: 28px; height: 28px;
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    /* Architecture Diagram */
+    .arch-diagram {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr 60px 1fr;
+      gap: 0;
+      align-items: center;
+    }
+    .arch-layer {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .arch-layer-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.9rem;
+    }
+    .arch-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.82rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .arch-box:last-child { margin-bottom: 0; }
+    .arch-box .tech-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .arrow-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      color: var(--muted);
+    }
+    .arrow-line {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border), var(--accent), var(--border));
+      position: relative;
+    }
+    .arrow-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .arrow-icon { font-size: 1.1rem; color: var(--accent); }
+
+    /* Grid 2-col */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
+
+    /* Tech Stack */
+    .stack-group { margin-bottom: 1.25rem; }
+    .stack-group:last-child { margin-bottom: 0; }
+    .stack-group-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    .tech-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip {
+      padding: 0.28rem 0.7rem;
+      border-radius: 5px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      border: 1px solid;
+    }
+    .chip-purple { background: #6c63ff18; border-color: #6c63ff55; color: #a5a0ff; }
+    .chip-teal   { background: #00d4aa18; border-color: #00d4aa55; color: #4dd9c0; }
+    .chip-orange { background: #f9731618; border-color: #f9731655; color: #fb923c; }
+    .chip-blue   { background: #3b82f618; border-color: #3b82f655; color: #60a5fa; }
+    .chip-green  { background: #22c55e18; border-color: #22c55e55; color: #4ade80; }
+    .chip-gray   { background: #8892aa18; border-color: #8892aa55; color: #a8b4cc; }
+
+    /* Data Flow */
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .flow-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .flow-step-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 32px;
+    }
+    .flow-num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .flow-connector {
+      width: 2px;
+      flex: 1;
+      min-height: 24px;
+      background: var(--border);
+      margin: 3px 0;
+    }
+    .flow-content {
+      padding-bottom: 1.25rem;
+      flex: 1;
+    }
+    .flow-title {
+      font-size: 0.87rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .flow-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .flow-code {
+      font-family: 'Menlo', 'Monaco', monospace;
+      font-size: 0.72rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 0.4rem 0.65rem;
+      margin-top: 0.5rem;
+      color: var(--accent2);
+    }
+
+    /* Endpoints Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid #1e2235;
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--surface2); }
+    .method {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-family: monospace;
+      background: #22c55e18;
+      color: #4ade80;
+      border: 1px solid #22c55e44;
+    }
+    .path { font-family: monospace; color: var(--accent2); }
+
+    /* Session Cards */
+    .session-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .session-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .session-card.day1::before { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+    .session-card.day2::before { background: linear-gradient(90deg, var(--accent3), var(--accent4)); }
+    .session-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .session-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .session-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+    .session-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* Models */
+    .model-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .model-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent2);
+      font-family: monospace;
+      margin-bottom: 0.6rem;
+    }
+    .model-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .model-field {
+      font-size: 0.75rem;
+      font-family: monospace;
+      color: var(--muted);
+      display: flex;
+      gap: 0.5rem;
+    }
+    .model-field .fname { color: var(--text); }
+    .model-field .ftype { color: var(--accent4); }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 3rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main { padding: 1.5rem; }
+      .arch-diagram { grid-template-columns: 1fr; }
+      .arrow-col { display: none; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Partner Basecamp — Architecture Overview</h1>
+  <p>Workshop repository · Claude AI · Full-stack demo + 7 modular training exercises</p>
+  <div class="header-meta">
+    <span class="badge"><span class="dot dot-green"></span>Live Demo App</span>
+    <span class="badge"><span class="dot dot-purple"></span>Vue 3 + FastAPI</span>
+    <span class="badge"><span class="dot dot-teal"></span>Anthropic SDK</span>
+    <span class="badge"><span class="dot dot-green"></span>Day 1 + Day 2 Sessions</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- System Architecture -->
+  <div>
+    <section-title>System Architecture · Inventory Management App</section-title>
+    <div class="card">
+      <div class="arch-diagram">
+
+        <!-- Frontend -->
+        <div class="arch-layer">
+          <div class="arch-layer-title" style="color: #a5a0ff;">Frontend</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#a5a0ff"></span>Vue 3 (SPA)</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#a5a0ff"></span>Vue Router 4</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#a5a0ff"></span>Axios HTTP Client</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#a5a0ff"></span>Vite 5 (Build)</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#a5a0ff"></span>i18n (en / ja)</div>
+          <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--muted)">Port 3000</div>
+        </div>
+
+        <!-- Arrow 1 -->
+        <div class="arrow-col">
+          <div class="arrow-label">HTTP</div>
+          <div class="arrow-line"></div>
+          <div class="arrow-icon">⇄</div>
+          <div class="arrow-label">Axios</div>
+        </div>
+
+        <!-- Backend -->
+        <div class="arch-layer">
+          <div class="arch-layer-title" style="color:#4dd9c0;">Backend</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#4dd9c0"></span>FastAPI</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#4dd9c0"></span>Uvicorn ASGI</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#4dd9c0"></span>Pydantic v2</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#4dd9c0"></span>CORS Middleware</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#4dd9c0"></span>Filter Engine</div>
+          <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--muted)">Port 8001 · Python 3.11+</div>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="arrow-col">
+          <div class="arrow-label">Load</div>
+          <div class="arrow-line"></div>
+          <div class="arrow-icon">→</div>
+          <div class="arrow-label">at startup</div>
+        </div>
+
+        <!-- Data Layer -->
+        <div class="arch-layer">
+          <div class="arch-layer-title" style="color:#fb923c;">Data Layer</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#fb923c"></span>inventory.json</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#fb923c"></span>orders.json</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#fb923c"></span>demand_forecasts.json</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#fb923c"></span>backlog_items.json</div>
+          <div class="arch-box"><span class="tech-dot" style="background:#fb923c"></span>spending.json</div>
+          <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--muted)">In-memory · 12 months 2025</div>
+        </div>
+
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#a5a0ff"></span>Frontend (Vue 3 / Vite)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#4dd9c0"></span>Backend (FastAPI / Python)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#fb923c"></span>Mock Data (JSON files, non-persistent)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Stack -->
+  <div>
+    <section-title>Tech Stack</section-title>
+    <div class="grid-2">
+
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#6c63ff22;">🖥</span>
+          Frontend
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Framework</div>
+          <div class="tech-chips">
+            <span class="chip chip-purple">Vue 3</span>
+            <span class="chip chip-purple">Composition API</span>
+            <span class="chip chip-purple">Vue Router 4</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Build & Tooling</div>
+          <div class="tech-chips">
+            <span class="chip chip-teal">Vite 5</span>
+            <span class="chip chip-gray">Node 18+</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">HTTP / I18n</div>
+          <div class="tech-chips">
+            <span class="chip chip-blue">Axios 1.6</span>
+            <span class="chip chip-green">vue-i18n (en/ja)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#00d4aa22;">⚙️</span>
+          Backend
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Framework</div>
+          <div class="tech-chips">
+            <span class="chip chip-teal">FastAPI 0.110+</span>
+            <span class="chip chip-teal">Uvicorn 0.24+</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Validation & Runtime</div>
+          <div class="tech-chips">
+            <span class="chip chip-blue">Pydantic v2</span>
+            <span class="chip chip-orange">Python 3.11+</span>
+            <span class="chip chip-gray">uv (package mgr)</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Testing</div>
+          <div class="tech-chips">
+            <span class="chip chip-green">pytest 8+</span>
+            <span class="chip chip-green">pytest-asyncio</span>
+            <span class="chip chip-green">httpx</span>
+            <span class="chip chip-green">pytest-cov</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#f9731622;">🤖</span>
+          AI / Claude SDK
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Core SDK</div>
+          <div class="tech-chips">
+            <span class="chip chip-purple">anthropic-sdk (Python)</span>
+            <span class="chip chip-purple">Claude API</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Notebooks Environment</div>
+          <div class="tech-chips">
+            <span class="chip chip-orange">Jupyter Notebooks</span>
+            <span class="chip chip-blue">GitHub Codespaces</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Models Used</div>
+          <div class="tech-chips">
+            <span class="chip chip-teal">Claude Sonnet 4.x</span>
+            <span class="chip chip-teal">Claude Haiku 4.5</span>
+            <span class="chip chip-teal">Claude Opus 4.x</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#3b82f622;">🔧</span>
+          Claude Code Integration
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Subagents</div>
+          <div class="tech-chips">
+            <span class="chip chip-purple">vue-expert</span>
+            <span class="chip chip-purple">code-reviewer</span>
+            <span class="chip chip-purple">security-auditor</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">Custom Commands</div>
+          <div class="tech-chips">
+            <span class="chip chip-gray">/start</span>
+            <span class="chip chip-gray">/stop</span>
+            <span class="chip chip-gray">/test</span>
+            <span class="chip chip-gray">/optimize</span>
+            <span class="chip chip-gray">/demo-branch</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <div class="stack-group-label">MCP</div>
+          <div class="tech-chips">
+            <span class="chip chip-green">GitHub MCP Server</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Data Flow -->
+  <div>
+    <section-title>Data Flow · Request Lifecycle</section-title>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#6c63ff22;">↓</span>
+          Inventory Management Request
+        </div>
+        <div class="flow-steps">
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#6c63ff22;color:#a5a0ff;border:1px solid #6c63ff55;">1</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">User Interaction (Vue 3 UI)</div>
+              <div class="flow-desc">User selects filters (warehouse, category, status, time period) via FilterBar composable.</div>
+              <div class="flow-code">useFilters() → reactive state update</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#00d4aa22;color:#4dd9c0;border:1px solid #00d4aa55;">2</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">API Request (Axios)</div>
+              <div class="flow-desc">Frontend calls backend with query params via api.js helpers.</div>
+              <div class="flow-code">GET /api/orders?warehouse=SF&amp;status=Delivered</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#f9731622;color:#fb923c;border:1px solid #f9731655;">3</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">FastAPI Route Handler</div>
+              <div class="flow-desc">Route parses query params, applies filter logic via apply_filters() + filter_by_month().</div>
+              <div class="flow-code">@app.get("/api/orders") → apply_filters(data)</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;">4</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">In-Memory Data Lookup</div>
+              <div class="flow-desc">Filtered against mock_data loaded at startup. Pydantic validates each record.</div>
+              <div class="flow-code">mock_data["orders"] → List[Order] (Pydantic)</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#22c55e22;color:#4ade80;border:1px solid #22c55e55;">5</div>
+            </div>
+            <div class="flow-content" style="padding-bottom:0">
+              <div class="flow-title">JSON Response → Reactive UI</div>
+              <div class="flow-desc">Frontend computed properties re-render views with filtered data.</div>
+              <div class="flow-code">response.data → Vue reactive → DOM update</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="icon" style="background:#f9731622;">🤖</span>
+          Claude API / Notebook Flow
+        </div>
+        <div class="flow-steps">
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#6c63ff22;color:#a5a0ff;border:1px solid #6c63ff55;">1</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">Notebook Cell Execution</div>
+              <div class="flow-desc">User runs a Jupyter cell with an Anthropic SDK call, passing messages and optional tools.</div>
+              <div class="flow-code">client = anthropic.Anthropic(api_key=...)</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#00d4aa22;color:#4dd9c0;border:1px solid #00d4aa55;">2</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">Claude API Request</div>
+              <div class="flow-desc">SDK sends messages to Claude. Tools defined as JSON schemas enable agentic loops.</div>
+              <div class="flow-code">client.messages.create(model, messages, tools)</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#f9731622;color:#fb923c;border:1px solid #f9731655;">3</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">Tool Use / Agentic Loop</div>
+              <div class="flow-desc">If stop_reason == "tool_use", execute tool locally and feed results back to Claude.</div>
+              <div class="flow-code">while response.stop_reason == "tool_use": ...</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;">4</div>
+              <div class="flow-connector"></div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-title">Eval Harness (Day 2 Session 1)</div>
+              <div class="flow-desc">Structured grader evaluates model outputs against test cases. Metrics computed.</div>
+              <div class="flow-code">grade(expected, actual) → pass/fail + score</div>
+            </div>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-line">
+              <div class="flow-num" style="background:#22c55e22;color:#4ade80;border:1px solid #22c55e55;">5</div>
+            </div>
+            <div class="flow-content" style="padding-bottom:0">
+              <div class="flow-title">Output + Metrics Display</div>
+              <div class="flow-desc">Results rendered in notebook: TTFT, cost, OTPS, accuracy, pass/fail rates.</div>
+              <div class="flow-code">display(results_df)  # pandas / rich output</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Endpoints -->
+  <div>
+    <section-title>API Endpoints · FastAPI Backend (port 8001)</section-title>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Filters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/inventory</td><td>List all inventory items</td><td>warehouse, category</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/inventory/{item_id}</td><td>Single item detail</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/orders</td><td>List orders with status tracking</td><td>warehouse, category, status, month</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/orders/{order_id}</td><td>Single order detail</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/demand</td><td>Demand forecast data</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/backlog</td><td>Backlog items with PO enrichment</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/dashboard/summary</td><td>Aggregated KPI metrics</td><td>warehouse, category, status, month</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/spending/summary</td><td>Overall spending stats</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/spending/monthly</td><td>Monthly spending breakdown</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/spending/categories</td><td>Spending by category</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/spending/transactions</td><td>Recent cost transactions</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/reports/quarterly</td><td>Q1–Q4 2025 performance</td><td>—</td></tr>
+          <tr><td><span class="method">GET</span></td><td class="path">/api/reports/monthly-trends</td><td>Month-over-month trends</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Data Models -->
+  <div>
+    <section-title>Pydantic Data Models</section-title>
+    <div class="grid-3">
+
+      <div class="model-card">
+        <div class="model-name">InventoryItem</div>
+        <div class="model-fields">
+          <div class="model-field"><span class="fname">id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">sku</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">name</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">category</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">warehouse</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">quantity_on_hand</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">reorder_point</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">unit_cost</span><span class="ftype">float</span></div>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <div class="model-name">Order</div>
+        <div class="model-fields">
+          <div class="model-field"><span class="fname">id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">order_number</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">customer</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">items</span><span class="ftype">List[dict]</span></div>
+          <div class="model-field"><span class="fname">status</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">order_date</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">total_value</span><span class="ftype">float</span></div>
+          <div class="model-field"><span class="fname">warehouse</span><span class="ftype">Optional[str]</span></div>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <div class="model-name">BacklogItem</div>
+        <div class="model-fields">
+          <div class="model-field"><span class="fname">id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">order_id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">item_sku</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">item_name</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">quantity_needed</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">days_delayed</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">priority</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">has_purchase_order</span><span class="ftype">Optional[bool]</span></div>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <div class="model-name">DemandForecast</div>
+        <div class="model-fields">
+          <div class="model-field"><span class="fname">id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">item_sku</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">item_name</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">current_demand</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">forecasted_demand</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">trend</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">period</span><span class="ftype">str</span></div>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <div class="model-name">PurchaseOrder</div>
+        <div class="model-fields">
+          <div class="model-field"><span class="fname">id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">backlog_item_id</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">supplier_name</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">quantity</span><span class="ftype">int</span></div>
+          <div class="model-field"><span class="fname">unit_cost</span><span class="ftype">float</span></div>
+          <div class="model-field"><span class="fname">status</span><span class="ftype">str</span></div>
+          <div class="model-field"><span class="fname">expected_delivery_date</span><span class="ftype">str</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Workshop Sessions -->
+  <div>
+    <section-title>Workshop Sessions</section-title>
+    <div style="margin-bottom:0.75rem; font-size:0.8rem; color:var(--muted)">Day 1 — Build-Along + Exercises</div>
+    <div class="grid-3" style="margin-bottom:1.5rem">
+
+      <div class="session-card day1">
+        <div class="session-num">Day 1 · Session 1</div>
+        <div class="session-name">Inventory Management App</div>
+        <div class="session-desc">Full-stack build-along: Vue 3 + FastAPI factory inventory system with Claude Code assistance.</div>
+        <div class="session-tags">
+          <span class="tag">Full-stack</span><span class="tag">Claude Code</span><span class="tag">Vue 3</span><span class="tag">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="session-card day1">
+        <div class="session-num">Day 1 · Session 2</div>
+        <div class="session-name">Developer Platform</div>
+        <div class="session-desc">Build multi-tool support ticket agents with Claude API agentic loops and tool use.</div>
+        <div class="session-tags">
+          <span class="tag">Agentic Loops</span><span class="tag">Tool Use</span><span class="tag">Jupyter</span>
+        </div>
+      </div>
+
+      <div class="session-card day1">
+        <div class="session-num">Day 1 · Session 3</div>
+        <div class="session-name">Prompt Rescue</div>
+        <div class="session-desc">Diagnose and fix broken production prompts. Systematic debugging with eval harness.</div>
+        <div class="session-tags">
+          <span class="tag">Prompt Engineering</span><span class="tag">Evals</span><span class="tag">Debugging</span>
+        </div>
+      </div>
+
+      <div class="session-card day1">
+        <div class="session-num">Day 1 · Session 4</div>
+        <div class="session-name">Diagnosing AI Problems</div>
+        <div class="session-desc">Read-along: diagnose a failing multi-agent customer support system from traces and logs.</div>
+        <div class="session-tags">
+          <span class="tag">Multi-agent</span><span class="tag">Diagnostics</span><span class="tag">Read-along</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-bottom:0.75rem; font-size:0.8rem; color:var(--muted)">Day 2 — Advanced Topics</div>
+    <div class="grid-3">
+
+      <div class="session-card day2">
+        <div class="session-num">Day 2 · Session 1</div>
+        <div class="session-name">Evals Framework</div>
+        <div class="session-desc">Build systematic evaluation suites for AI assistants with grading logic and metrics.</div>
+        <div class="session-tags">
+          <span class="tag">Evaluation</span><span class="tag">Test Design</span><span class="tag">Metrics</span>
+        </div>
+      </div>
+
+      <div class="session-card day2">
+        <div class="session-num">Day 2 · Session 2</div>
+        <div class="session-name">Inference Optimization</div>
+        <div class="session-desc">Measure TTFT, TTC, OTPS, cost across models. Prompt caching impact analysis.</div>
+        <div class="session-tags">
+          <span class="tag">Performance</span><span class="tag">Caching</span><span class="tag">Cost</span>
+        </div>
+      </div>
+
+      <div class="session-card day2">
+        <div class="session-num">Day 2 · Session 3</div>
+        <div class="session-name">Context Engineering</div>
+        <div class="session-desc">Explore context rot, needle-in-a-haystack tests, Claude vs GPT-4.1 comparisons.</div>
+        <div class="session-tags">
+          <span class="tag">Context Length</span><span class="tag">Research</span><span class="tag">Benchmarks</span>
+        </div>
+      </div>
+
+      <div class="session-card day2">
+        <div class="session-num">Day 2 · Session 4</div>
+        <div class="session-name">Agent Hackathon</div>
+        <div class="session-desc">Build an RFP response automation agent: parser → knowledge base → structured output.</div>
+        <div class="session-tags">
+          <span class="tag">Hackathon</span><span class="tag">RFP Agent</span><span class="tag">RAG</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Partner Basecamp Exercises · Architecture overview generated 2026-05-20
+</footer>
+
+</body>
+</html>

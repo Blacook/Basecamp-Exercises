@@ -133,14 +133,14 @@ const selectLanguage = (locale) => {
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
+  position: fixed; /* fixed avoids sidebar overflow clipping */
+  bottom: 3.5rem;
+  right: 4rem;
   min-width: 160px;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   overflow: hidden;
 }
