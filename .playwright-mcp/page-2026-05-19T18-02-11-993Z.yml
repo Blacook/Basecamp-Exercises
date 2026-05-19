@@ -1,0 +1,281 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: CC
+      - generic [ref=e7]:
+        - generic [ref=e8]: Catalyst Components
+        - generic [ref=e9]: Inventory Management System
+      - button "Collapse sidebar" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+    - navigation [ref=e13]:
+      - link "Overview" [ref=e14] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e15]: Overview
+      - link "Inventory" [ref=e16] [cursor=pointer]:
+        - /url: /inventory
+        - generic [ref=e17]: Inventory
+      - link "Orders" [ref=e18] [cursor=pointer]:
+        - /url: /orders
+        - generic [ref=e19]: Orders
+      - link "Finance" [ref=e20] [cursor=pointer]:
+        - /url: /spending
+        - generic [ref=e21]: Finance
+      - link "Demand Forecast" [ref=e22] [cursor=pointer]:
+        - /url: /demand
+        - generic [ref=e23]: Demand Forecast
+      - link "Restocking" [ref=e24] [cursor=pointer]:
+        - /url: /restocking
+        - generic [ref=e25]: Restocking
+      - link "Reports" [active] [ref=e26] [cursor=pointer]:
+        - /url: /reports
+        - generic [ref=e27]: Reports
+    - generic [ref=e28]:
+      - button "English" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e35]: English
+        - img [ref=e36]
+      - button "JD John Doe" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: JD
+        - generic [ref=e41]: John Doe
+        - img [ref=e42]
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Time Period
+          - combobox [ref=e50] [cursor=pointer]:
+            - option "All Months" [selected]
+            - option "January"
+            - option "February"
+            - option "March"
+            - option "April"
+            - option "May"
+            - option "June"
+            - option "July"
+            - option "August"
+            - option "September"
+            - option "October"
+            - option "November"
+            - option "December"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Location
+          - combobox [ref=e53] [cursor=pointer]:
+            - option "All" [selected]
+            - option "San Francisco"
+            - option "London"
+            - option "Tokyo"
+        - generic [ref=e54]:
+          - generic [ref=e55]: Category
+          - combobox [ref=e56] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Circuit Boards"
+            - option "Sensors"
+            - option "Actuators"
+            - option "Controllers"
+            - option "Power Supplies"
+        - generic [ref=e57]:
+          - generic [ref=e58]: Order Status
+          - combobox [ref=e59] [cursor=pointer]:
+            - option "All" [selected]
+            - option "Delivered"
+            - option "Shipped"
+            - option "Processing"
+            - option "Backordered"
+      - button "Reset all filters" [disabled] [ref=e60]:
+        - img [ref=e61]
+    - main [ref=e63]:
+      - generic [ref=e5003]:
+        - generic [ref=e5004]:
+          - heading "Performance Reports" [level=2] [ref=e5005]
+          - paragraph [ref=e5006]: View quarterly performance metrics and monthly trends
+        - generic [ref=e5007]:
+          - generic [ref=e5008]:
+            - heading "Quarterly Performance" [level=3] [ref=e5010]
+            - table [ref=e5012]:
+              - rowgroup [ref=e5013]:
+                - row "Quarter Total Orders Total Revenue Avg Order Value Fulfillment Rate" [ref=e5014]:
+                  - columnheader "Quarter" [ref=e5015]
+                  - columnheader "Total Orders" [ref=e5016]
+                  - columnheader "Total Revenue" [ref=e5017]
+                  - columnheader "Avg Order Value" [ref=e5018]
+                  - columnheader "Fulfillment Rate" [ref=e5019]
+              - rowgroup [ref=e5020]:
+                - row "Q1-2025 62 $8,653,365.00 $139,570.40 77.4%" [ref=e5021]:
+                  - cell "Q1-2025" [ref=e5022]:
+                    - strong [ref=e5023]: Q1-2025
+                  - cell "62" [ref=e5024]
+                  - cell "$8,653,365.00" [ref=e5025]
+                  - cell "$139,570.40" [ref=e5026]
+                  - cell "77.4%" [ref=e5027]:
+                    - generic [ref=e5028]: 77.4%
+                - row "Q2-2025 64 $4,345,381.64 $67,896.59 71.9%" [ref=e5029]:
+                  - cell "Q2-2025" [ref=e5030]:
+                    - strong [ref=e5031]: Q2-2025
+                  - cell "64" [ref=e5032]
+                  - cell "$4,345,381.64" [ref=e5033]
+                  - cell "$67,896.59" [ref=e5034]
+                  - cell "71.9%" [ref=e5035]:
+                    - generic [ref=e5036]: 71.9%
+                - row "Q3-2025 62 $7,551,977.41 $121,806.09 54.8%" [ref=e5037]:
+                  - cell "Q3-2025" [ref=e5038]:
+                    - strong [ref=e5039]: Q3-2025
+                  - cell "62" [ref=e5040]
+                  - cell "$7,551,977.41" [ref=e5041]
+                  - cell "$121,806.09" [ref=e5042]
+                  - cell "54.8%" [ref=e5043]:
+                    - generic [ref=e5044]: 54.8%
+                - row "Q4-2025 62 $10,616,129.04 $171,227.89 35.5%" [ref=e5045]:
+                  - cell "Q4-2025" [ref=e5046]:
+                    - strong [ref=e5047]: Q4-2025
+                  - cell "62" [ref=e5048]
+                  - cell "$10,616,129.04" [ref=e5049]
+                  - cell "$171,227.89" [ref=e5050]
+                  - cell "35.5%" [ref=e5051]:
+                    - generic [ref=e5052]: 35.5%
+          - generic [ref=e5053]:
+            - heading "Monthly Revenue Trend" [level=3] [ref=e5055]
+            - generic [ref=e5057]:
+              - generic [ref=e5058]:
+                - generic "$1,993,655.74" [ref=e5060] [cursor=pointer]
+                - generic [ref=e5061]: Jan 2025
+              - generic [ref=e5062]:
+                - generic "$4,374,516.00" [ref=e5064] [cursor=pointer]
+                - generic [ref=e5065]: Feb 2025
+              - generic [ref=e5066]:
+                - generic "$2,285,193.26" [ref=e5068] [cursor=pointer]
+                - generic [ref=e5069]: Mar 2025
+              - generic [ref=e5070]:
+                - generic "$1,490,663.97" [ref=e5072] [cursor=pointer]
+                - generic [ref=e5073]: Apr 2025
+              - generic [ref=e5074]:
+                - generic "$1,460,581.74" [ref=e5076] [cursor=pointer]
+                - generic [ref=e5077]: May 2025
+              - generic [ref=e5078]:
+                - generic "$1,394,135.93" [ref=e5080] [cursor=pointer]
+                - generic [ref=e5081]: Jun 2025
+              - generic [ref=e5082]:
+                - generic "$3,036,142.50" [ref=e5084] [cursor=pointer]
+                - generic [ref=e5085]: Jul 2025
+              - generic [ref=e5086]:
+                - generic "$1,848,694.13" [ref=e5088] [cursor=pointer]
+                - generic [ref=e5089]: Aug 2025
+              - generic [ref=e5090]:
+                - generic "$2,667,140.78" [ref=e5092] [cursor=pointer]
+                - generic [ref=e5093]: Sep 2025
+              - generic [ref=e5094]:
+                - generic "$2,714,614.17" [ref=e5096] [cursor=pointer]
+                - generic [ref=e5097]: Oct 2025
+              - generic [ref=e5098]:
+                - generic "$2,668,438.92" [ref=e5100] [cursor=pointer]
+                - generic [ref=e5101]: Nov 2025
+              - generic [ref=e5102]:
+                - generic "$5,233,075.93" [ref=e5104] [cursor=pointer]
+                - generic [ref=e5105]: Dec 2025
+          - generic [ref=e5106]:
+            - heading "Month-over-Month Analysis" [level=3] [ref=e5108]
+            - table [ref=e5110]:
+              - rowgroup [ref=e5111]:
+                - row "Month Orders Revenue Change Growth Rate" [ref=e5112]:
+                  - columnheader "Month" [ref=e5113]
+                  - columnheader "Orders" [ref=e5114]
+                  - columnheader "Revenue" [ref=e5115]
+                  - columnheader "Change" [ref=e5116]
+                  - columnheader "Growth Rate" [ref=e5117]
+              - rowgroup [ref=e5118]:
+                - row "Jan 2025 18 $1,993,655.74 - -" [ref=e5119]:
+                  - cell "Jan 2025" [ref=e5120]:
+                    - strong [ref=e5121]: Jan 2025
+                  - cell "18" [ref=e5122]
+                  - cell "$1,993,655.74" [ref=e5123]
+                  - cell "-" [ref=e5124]
+                  - cell "-" [ref=e5125]
+                - row "Feb 2025 20 $4,374,516.00 +$2,380,860.26 +119.4%" [ref=e5126]:
+                  - cell "Feb 2025" [ref=e5127]:
+                    - strong [ref=e5128]: Feb 2025
+                  - cell "20" [ref=e5129]
+                  - cell "$4,374,516.00" [ref=e5130]
+                  - cell "+$2,380,860.26" [ref=e5131]
+                  - cell "+119.4%" [ref=e5132]
+                - row "Mar 2025 24 $2,285,193.26 -$2,089,322.74 -47.8%" [ref=e5133]:
+                  - cell "Mar 2025" [ref=e5134]:
+                    - strong [ref=e5135]: Mar 2025
+                  - cell "24" [ref=e5136]
+                  - cell "$2,285,193.26" [ref=e5137]
+                  - cell "-$2,089,322.74" [ref=e5138]
+                  - cell "-47.8%" [ref=e5139]
+                - row "Apr 2025 19 $1,490,663.97 -$794,529.28 -34.8%" [ref=e5140]:
+                  - cell "Apr 2025" [ref=e5141]:
+                    - strong [ref=e5142]: Apr 2025
+                  - cell "19" [ref=e5143]
+                  - cell "$1,490,663.97" [ref=e5144]
+                  - cell "-$794,529.28" [ref=e5145]
+                  - cell "-34.8%" [ref=e5146]
+                - row "May 2025 27 $1,460,581.74 -$30,082.22 -2.0%" [ref=e5147]:
+                  - cell "May 2025" [ref=e5148]:
+                    - strong [ref=e5149]: May 2025
+                  - cell "27" [ref=e5150]
+                  - cell "$1,460,581.74" [ref=e5151]
+                  - cell "-$30,082.22" [ref=e5152]
+                  - cell "-2.0%" [ref=e5153]
+                - row "Jun 2025 18 $1,394,135.93 -$66,445.81 -4.5%" [ref=e5154]:
+                  - cell "Jun 2025" [ref=e5155]:
+                    - strong [ref=e5156]: Jun 2025
+                  - cell "18" [ref=e5157]
+                  - cell "$1,394,135.93" [ref=e5158]
+                  - cell "-$66,445.81" [ref=e5159]
+                  - cell "-4.5%" [ref=e5160]
+                - row "Jul 2025 18 $3,036,142.50 +$1,642,006.56 +117.8%" [ref=e5161]:
+                  - cell "Jul 2025" [ref=e5162]:
+                    - strong [ref=e5163]: Jul 2025
+                  - cell "18" [ref=e5164]
+                  - cell "$3,036,142.50" [ref=e5165]
+                  - cell "+$1,642,006.56" [ref=e5166]
+                  - cell "+117.8%" [ref=e5167]
+                - row "Aug 2025 22 $1,848,694.13 -$1,187,448.36 -39.1%" [ref=e5168]:
+                  - cell "Aug 2025" [ref=e5169]:
+                    - strong [ref=e5170]: Aug 2025
+                  - cell "22" [ref=e5171]
+                  - cell "$1,848,694.13" [ref=e5172]
+                  - cell "-$1,187,448.36" [ref=e5173]
+                  - cell "-39.1%" [ref=e5174]
+                - row "Sep 2025 22 $2,667,140.78 +$818,446.65 +44.3%" [ref=e5175]:
+                  - cell "Sep 2025" [ref=e5176]:
+                    - strong [ref=e5177]: Sep 2025
+                  - cell "22" [ref=e5178]
+                  - cell "$2,667,140.78" [ref=e5179]
+                  - cell "+$818,446.65" [ref=e5180]
+                  - cell "+44.3%" [ref=e5181]
+                - row "Oct 2025 20 $2,714,614.17 +$47,473.38 +1.8%" [ref=e5182]:
+                  - cell "Oct 2025" [ref=e5183]:
+                    - strong [ref=e5184]: Oct 2025
+                  - cell "20" [ref=e5185]
+                  - cell "$2,714,614.17" [ref=e5186]
+                  - cell "+$47,473.38" [ref=e5187]
+                  - cell "+1.8%" [ref=e5188]
+                - row "Nov 2025 25 $2,668,438.92 -$46,175.24 -1.7%" [ref=e5189]:
+                  - cell "Nov 2025" [ref=e5190]:
+                    - strong [ref=e5191]: Nov 2025
+                  - cell "25" [ref=e5192]
+                  - cell "$2,668,438.92" [ref=e5193]
+                  - cell "-$46,175.24" [ref=e5194]
+                  - cell "-1.7%" [ref=e5195]
+                - row "Dec 2025 17 $5,233,075.93 +$2,564,637.01 +96.1%" [ref=e5196]:
+                  - cell "Dec 2025" [ref=e5197]:
+                    - strong [ref=e5198]: Dec 2025
+                  - cell "17" [ref=e5199]
+                  - cell "$5,233,075.93" [ref=e5200]
+                  - cell "+$2,564,637.01" [ref=e5201]
+                  - cell "+96.1%" [ref=e5202]
+          - generic [ref=e5203]:
+            - generic [ref=e5204]:
+              - generic [ref=e5205]: Total Revenue (YTD)
+              - generic [ref=e5206]: $31,166,853.08
+            - generic [ref=e5207]:
+              - generic [ref=e5208]: Avg Monthly Revenue
+              - generic [ref=e5209]: $2,597,237.75
+            - generic [ref=e5210]:
+              - generic [ref=e5211]: Total Orders (YTD)
+              - generic [ref=e5212]: "250"
+            - generic [ref=e5213]:
+              - generic [ref=e5214]: Best Performing Quarter
+              - generic [ref=e5215]: Q4-2025
